@@ -1,15 +1,621 @@
-Package: dev.mineek.muffinstore
-Version: 0.0.1
+Package: bitesms
+Version: 8.3
 Architecture: iphoneos-arm
-Maintainer: Mineek
-Installed-Size: 96
-Filename: debs/dev.mineek.muffinstore_0.0.1_iphoneos-arm.deb
-Size: 16760
-MD5sum: 1f348a94b7028f4023c27eb3b192a01e
-SHA1: fa876d5ec2b43b8518e26a5b6cd8ed046517779e
-SHA256: a5b75934991ab40a7b893b927ea36da1f819825d4658dfed814997431cd1ec00
+Maintainer: biteSMS <help@bitesms.com>
+Installed-Size: 11456
+Pre-Depends: dpkg (>= 1.13.25-5)
+Depends: mobilesubstrate (>= 0.9.2587-1)
+Filename: debs/bitesms_8.3.deb
+Size: 7432492
+MD5sum: 2d638ef504cb5105d53f58fea732e2be
+SHA1: 2140f6b456683a59f69cb25514343e9ead2d63ec
+SHA256: 0320c42e8194a31c3ebff8199e1fb2e0ffde6df762906be00b44960df2431ccd
+Section: Messaging
+Priority: optional
+Homepage: http://www.bitesms.com/changelog
+Description: Frustrated with the built-in Messages app? Want more features? Wish it was much quicker to compose or reply to messages? Then biteSMS is for you, with lots of extra features like Quick Reply, Quick Compose, Scheduled Messages, Auto-Forward, Auto-Retry, Passcode Lock, Privacy, Delivery Reports, Contact Pics, Easy Pick Smileys, Templates, Signatures and much more!<br><br>Simply use biteSMS as a complete souped-up replacement to the built-in Messages application on iPhone devices.
+Author: biteSMS <help@bitesms.com>
+Depiction: http://bitesms.com/campaign/biteSMSDepiction
+Dev: bitesms
+Icon: file:///Applications/biteSMS.app/icon.png
+Name: biteSMS
+
+Package: co.dynastic.ios.tweak.shortlook
+Version: 1.0.23
+Architecture: iphoneos-arm
+Maintainer: Ayden Panhuyzen
+Installed-Size: 2128
+Depends: mobilesubstrate, firmware (>= 11.0), co.dynastic.ios.lib.flora
+Filename: debs/e0385d50470f0aabb6198e16da2f8b4b.deb
+Size: 1294668
+MD5sum: e0385d50470f0aabb6198e16da2f8b4b
+SHA1: 576514c2bc46176e61f80e7e9d054b584da6b2a6
+SHA256: a8ff2a582ebe1d6e2f5f3b89e101abad938769da32aeceb973fd5ef11e6441ff
+Section: Tweaks
+Description: ShortLook shows you your notifications at a glance. ShortLook displays on your locked iPhone as you receive a notification using it's beautiful full screen design, allowing for readability from a distance. Made to be as unobtrusive as possible, it dismisses as soon as you tap the screen or Raise to Wake. It's configurable UI and behaviours ensure that ShortLook works how you want it to work.
+Author: Dynastic
+Name: ShortLook
+
+Package: com.afnanahmad.chromahomebarx
+Version: 0.4
+Architecture: iphoneos-arm
+Maintainer: BigBoss <bigboss@thebigboss.org>
+Installed-Size: 642
+Depends: firmware(>= 11.0), mobilesubstrate, preferenceloader, org.thebigboss.libcolorpicker
+Filename: debs/chromahomebarx_0.4.deb
+Size: 100680
+MD5sum: e363693b8b90407113a8c9738205985f
+SHA1: 453f96d587b020e304fa558907a245619cdadd63
+SHA256: 95a6e42908b17a61b8d4ee16024b68953fe0c248c5cfccbce2a31e539e016036
+Section: Tweaks
+Priority: optional
+Homepage: http://moreinfo.thebigboss.org/moreinfo/depiction.php?file=chromahomebarxDp
+Description: Razer Chroma insprird HomeBar coloring tweak for iPhone X, also works with LittleX.
+Tag: purpose::extension, compatible::ios11, compatible::ios12
+Author: Afnan Ahmad <afnanahmaddd@gmail.com>
+Depiction: http://moreinfo.thebigboss.org/moreinfo/depiction.php?file=chromahomebarxDp
+Dev: afnanahmad
+Icon: file:///Library/PreferenceBundles/ChromaHomeBarX.bundle/chroma@2x.png
+Name: ChromaHomeBarX
+Sponsor: thebigboss.org <http://thebigboss.org>
+
+Package: com.boo.airport
+Version: 2.1
+Architecture: iphoneos-arm
+Maintainer: Boo
+Installed-Size: 20416
+Depends: firmware (>= 11.0), mobilesubstrate, preferenceloader, ws.hbang.common (>= 1.11)
+Conflicts: com.yourepo.exfoliate.glitchpods
+Filename: debs/com.boo.airport_2.1.deb
+Size: 13427376
+MD5sum: 2c264b8097fe7feb40046e4f157254f9
+SHA1: 5a83a83bad7a6e4fe4ae2d4c94e3fbe4c20d5cf4
+SHA256: 429e4e9abf30473ad8edb249d86c3bb9c813d947be4a6747f92aa71bd1976cd9
+Section: Tweaks
+Description: The Ultimate AirPods Customization Tweak
+Author: Boo
+Name: AirPort
+
+Package: com.boo.airport13
+Version: 1.0
+Architecture: iphoneos-arm
+Maintainer: Boo
+Installed-Size: 40976
+Depends: firmware (>= 13.0), mobilesubstrate, preferenceloader, ws.hbang.common (>= 1.11), org.thebigboss.libcolorpicker
+Filename: debs/com.boo.airport13_1.0.deb
+Size: 20337518
+MD5sum: 71255b72a62468df6051699e53e8f605
+SHA1: 14b52acd748cf5c56af495ea52f9e0412fe37fdb
+SHA256: ba63c85dca20655d8be1315aa10bd23ea4d03089370a7daf3907f9f9e91a5182
+Section: Tweaks
+Description: The Ultimate AirPods Customization Tweak
+Author: Boo
+Name: AirPort (iOS 13)
+
+Package: com.creaturecoding.shuffle
+Version: 0.8.0b
+Architecture: iphoneos-arm
+Maintainer: CreatureSurvive <support@creaturecoding.com>
+Installed-Size: 472
+Depends: mobilesubstrate, com.creaturecoding.libcspreferences
+Conflicts: com.cpdigitaldarkroom.placeholder
+Replaces: com.cpdigitaldarkroom.placeholder
+Filename: debs/com.creaturecoding.shuffle_0.8.0b_iphoneos-arm.deb
+Size: 90978
+MD5sum: 1d1c28d18a3073ccaa3014b235944ebf
+SHA1: 36c65c53bf3c06dc75f55378ec509cc6e34bfd77
+SHA256: bbea0d69707d96d51559d8a49937b097e91af6292d4eb2912aebc55f69da7d8f
+Section: Tweaks
+Description: Mix up your preferences
+Author: CreatureSurvive <support@creaturecoding.com>
+Depiction: https://creaturesurvive.github.io/repo/cydia/shuffle/depiction/
+Name: shuffle
+
+Package: com.laughingquoll.siliquapro
+Version: 1.2.4
+Architecture: iphoneos-arm
+Maintainer: LaughingQuoll <me@laughingquoll.net>
+Installed-Size: 596
+Depends: firmware (>= 11.0), mobilesubstrate, com.laughingquoll.prefixui, com.opa334.ccsupport
+Filename: debs/com.laughingquoll.siliquapro_1.2.4_iphoneos-arm.deb
+Size: 91930
+MD5sum: f74bd92ded3aaf1e672a248b0e729a8c
+SHA1: 0c707eb59ce648768a3e495502ab9b10b33189f6
+SHA256: cf6f970e5185c6fd06c20fc0c5eda4aa36045701a05426a0f06b4fa1fbcc1edb
+Section: Tweaks
+Description: Custom actions for AirPods Pro
+Tag: cydia::commercial, compatible_min::ios11.0
+Author: LaughingQuoll <me@laughingquoll.net>
+Depiction: https://chariz.com/buy/siliqua-pro
+Icon: https://chariz.com/cdn/icon/siliqua-pro/icon@3x.png
+Name: Siliqua Pro
+
+Package: com.lns.pogr
+Version: 0.3.0
+Architecture: iphoneos-arm
+Maintainer: BigBoss <bigboss@thebigboss.org>
+Installed-Size: 568
+Depends: mobilesubstrate, firmware (>= 13.0)
+Filename: debs/podsgrant_0.3.0.deb
+Size: 78546
+MD5sum: f1e29c22965837f9d4e956e4462644cf
+SHA1: 704d2c2c52cb5a610e9c873a11eeea02c800014f
+SHA256: cd8616f02946b47589ff107d7b6b581eb67502581d531d25f21af1f1f6f3d2aa
+Section: Tweaks
+Priority: optional
+Homepage: http://moreinfo.thebigboss.org/moreinfo/depiction.php?file=podsgrantDp
+Description: Treat AirPods Pro 2 correctly
+Tag: purpose::extension
+Author: Ruphane <lnsspsd@protonmail.com>
+Depiction: http://moreinfo.thebigboss.org/moreinfo/depiction.php?file=podsgrantDp
+Dev: lns
+Name: PodsGrant
+Sponsor: thebigboss.org <http://thebigboss.org>
+
+Package: com.mrgcgamer.colormenotifs
+Version: 1.5.2
+Architecture: iphoneos-arm
+Maintainer: MrGcGamer
+Installed-Size: 1728
+Depends: mobilesubstrate, preferenceloader, firmware (>= 13.0), ws.hbang.common (>= 1.14), com.spark.libsparkcolourpicker (>= 0.0.14)
+Filename: debs/com.mrgcgamer.colormenotifs_1.5.2.deb
+Size: 1026458
+MD5sum: ff2931850cab904548ec2e756d37f3eb
+SHA1: c79397f0c96280ab00b138f23eeaad7d50d53b43
+SHA256: 5da19dc18f1eec381e559083eb729e922e370c95fe3437b0af19627e30ba812d
+Section: Tweaks
+Description: Bring colors to your notifications!
+Author: MrGcGamer
+Name: ColorMeNotifs
+
+Package: com.muirey03.amandus
+Version: 1.0.1
+Architecture: iphoneos-arm
+Maintainer: Muirey03
+Installed-Size: 360
+Depends: mobilesubstrate, ws.hbang.common
+Filename: debs/com.muirey03.amandus_1.0.1.deb
+Size: 35698
+MD5sum: a46425a5e22b241aa8e5a0756f7027d1
+SHA1: 946780bb46cbc7150362f19961a5e88de755d4b6
+SHA256: 0f66b3849bb96f6ef78f9e02ff4afba5f77183c7a2d35dd2640b56d810bd49a5
+Section: Tweaks
+Description: Apple Pay redesigned!
+Author: Muirey03
+Name: Amandus
+
+Package: com.muirey03.cr4shed
+Version: 4.3.0
+Architecture: iphoneos-arm
+Maintainer: Muirey03
+Installed-Size: 1384
+Depends: mobilesubstrate, com.muirey03.libmryipc, cy+cpu.arm64 | cy+cpu.arm64e, firmware (>= 9.0), ws.hbang.common (>= 1.11)
+Filename: debs/com.muirey03.cr4shed_4.3.0_iphoneos-arm.deb
+Size: 149078
+MD5sum: 293df1ba4eea1c3787ff31c0114725a7
+SHA1: 30aa8b231bb41dca965c57218918d307babe375d
+SHA256: 7a58e56ff3b6e13a3ab604f35cf1d04300e28f95b8f5cee1ef0bbbee80dba049
+Section: Tweaks
+Description: A modern crash reporter for iOS
+Author: Muirey03
+Name: Cr4shed
+
+Package: com.muirey03.flow
+Version: 1.2.2
+Architecture: iphoneos-arm
+Maintainer: Muirey03
+Installed-Size: 1112
+Depends: mobilesubstrate, preferenceloader, com.muirey03.libmryipc, ws.hbang.common (>= 1.11)
+Conflicts: me.nepeta.nereid, ch.mdaus.sylph, org.s1ris.spinxi
+Filename: debs/com.muirey03.flow_1.2.2.deb
+Size: 167764
+MD5sum: b66038b15d079dc92172b0d81760e14b
+SHA1: bb5aa5cea0424f3a8770252ee56886b10b6d637c
+SHA256: 3ae2ffa1897260d3cffa19f44e365073403fd84cfccb056abfbb518159ef81eb
+Section: Tweaks
+Description: Cover Flow like never before!
+Author: Muirey03
+Icon: file:///Library/PreferenceBundles/Flow.bundle/Icon-Large.png
+Name: Flow
+
+Package: com.muirey03.minotaur
+Version: 1.2.1
+Architecture: iphoneos-arm
+Maintainer: Muirey03
+Installed-Size: 616
+Depends: mobilesubstrate, preferenceloader
+Filename: debs/com.muirey03.minotaur_1.2.1.deb
+Size: 174286
+MD5sum: d4daafeb31d976085cc83b074ce76a3e
+SHA1: 05017cbfa7833be1215f93b9e1c79bbdb3bedd7a
+SHA256: 40add2cd0d5712c3a83b952f7ab44c1249cb6a5368a64498c3370a4f26dd07e3
+Section: Tweaks
+Description: Notifications in your Status Bar
+Author: Muirey03
+Icon: file:///Library/PreferenceBundles/MinotaurPrefs.bundle/Icon-Large.png
+Name: Minotaur
+
+Package: com.opa334.choicy
+Version: 1.5.1
+Architecture: iphoneos-arm
+Maintainer: BigBoss <bigboss@thebigboss.org>
+Installed-Size: 1321
+Depends: firmware (>= 10.0), mobilesubstrate (>= 0.9.5000), preferenceloader, com.opa334.altlist (>= 1.0.4)
+Filename: debs/Choicy 1.5.1.deb
+Size: 256802
+MD5sum: d8defa9bdba07fa41ad77897af7df05a
+SHA1: 614534b47da3127f45fa8e170461ffb232733e5b
+SHA256: a5938c864822ee14998d67cd7defec04e72f5277170ab9e91c99e556b543b4f7
+Section: Tweaks
+Homepage: http://moreinfo.thebigboss.org/moreinfo/depiction.php?file=choicyDp
+Description: Advanced Tweak Configuration!
+Tag: purpose::extension
+Author: opa334 <opa334@protonmail.com>
+Depiction: http://moreinfo.thebigboss.org/moreinfo/depiction.php?file=choicyDp
+Dev: opa334
+Icon: file:///Library/PreferenceBundles/ChoicyPrefs.bundle/ChoicyIcon@2x.png
+Name: Choicy
+Sponsor: thebigboss.org <http://thebigboss.org>
+
+Package: com.r333d.cylinder
+Version: 1.1
+Architecture: iphoneos-arm
+Maintainer: BigBoss <bigboss@thebigboss.org>
+Installed-Size: 1419
+Depends: firmware (>= 3.0), mobilesubstrate (>= 0.9.5000), preferenceloader
+Filename: debs/cylinder_1.1.deb
+Size: 300358
+MD5sum: c24e9c9b3f4096a8b93080207fac5580
+SHA1: dd35f74c38b9ac3652a134136e4ffcb15db67329
+SHA256: 5ddac771540c6f8f8e1ada87fa0deae2f85e1aac2536d125aaa0787667528cd4
+Section: Tweaks
+Homepage: http://moreinfo.thebigboss.org/moreinfo/depiction.php?file=cylinderDp
+Description: Make your icons dance
+Tag: purpose::extension, compatible::ios7, compatible::ios8, compatible::ios9, compatible::ios10, compatible::ios11, compatible::ios12, compatible::ios13
+Author: Reed Weichler <rweichler+cydia@gmail.com>
+Depiction: http://moreinfo.thebigboss.org/moreinfo/depiction.php?file=cylinderDp
+Dev: rweichler
+Icon: file:///Library/PreferenceBundles/CylinderSettings.bundle/Icon@2x.png
+Name: Cylinder
+Sponsor: thebigboss.org <http://thebigboss.org>
+
+Package: com.rileytestut.altdaemon
+Version: 1.0.1
+Architecture: iphoneos-arm
+Maintainer: Riley Testut <support@altstore.io>
+Installed-Size: 2560
+Depends: firmware (>= 12.2)
+Filename: debs/com.rileytestut.altdaemon_1.0.1_iphoneos-arm.deb
+Size: 597754
+MD5sum: 86b026f3f838e0ca193b086898e7152a
+SHA1: ec653b6067c8dd8daa2d1fad29ebcbb0c054bbbd
+SHA256: e30852d1e922dbf83222dd1a35d726491f19ff0f25a4415846638a4f99eac695
+Section: System
+Description: AltDaemon allows AltStore to install and refresh apps without a computer.
+Tag: compatible_min::ios12.2
+Author: Riley Testut <support@altstore.io>
+Depiction: https://chariz.com/get/altdaemon
+Icon: https://cdn.chariz.cloud/icon/altdaemon/icon@3x.png
+Name: AltDaemon
+
+Package: com.ryannair05.cylinder
+Version: 1.1.1
+Architecture: iphoneos-arm
+Maintainer: Ryan Nair <ryannairtweaks@gmail.com>
+Installed-Size: 1652
+Depends: firmware (>= 11.0), mobilesubstrate (>= 0.9.6011), preferenceloader
+Filename: debs/com.ryannair05.cylinder_1.1.1_iphoneos-arm.deb
+Size: 283140
+MD5sum: e5eb7712bd1fe7cdce9777c9c94b3229
+SHA1: e10f4a6ebb0f660f42ac588a03fbfe96f6b4566c
+SHA256: 9ffa6daf229ab1a3525a3e906d194ac27bed9da92dd14a682c3c9e6bb10ba853
+Section: Tweaks
+Description: Make your icons dance
+Tag: compatible_min::ios11.0
+Author: Ryan Nair <ryannairtweaks@gmail.com>
+Depiction: https://chariz.com/get/cylinder-reborn
+Icon: https://img.chariz.cloud/icon/cylinder-reborn/icon@3x.png
+Name: Cylinder Reborn
+
+Package: com.shiftcmdk.pencilchargingindicator
+Version: 1.2~b7
+Architecture: iphoneos-arm
+Maintainer: shiftcmdk
+Installed-Size: 3592
+Depends: mobilesubstrate
+Filename: debs/com.shiftcmdk.pencilchargingindicator_1.2~b7_iphoneos-arm.deb
+Size: 378932
+MD5sum: 43d42846a6ae58f0c641b13000d762e3
+SHA1: 4828bcef31c915881b03023e6df34da56dd0c050
+SHA256: 023ff8fd7d4a2fa855e38905c844dea1fde60b55f1b2dc79c709bb2c0835b145
+Section: Tweaks
+Description: Make charging less boring with the Apple Pencil charging animation from the iPad Pro 2018.
+Author: shiftcmdk
+Depiction: https://shiftcmdk.github.io/repo/depictions/?p=com.shiftcmdk.pencilchargingindicator
+Name: PencilChargingIndicator
+
+Package: com.spark.autounlockx
+Version: 1.1.0-rootless
+Architecture: iphoneos-arm64
+Maintainer: Spark
+Installed-Size: 416
+Depends: mobilesubstrate, preferenceloader
+Filename: debs/1.1.0-rootless.deb
+Size: 63138
+MD5sum: c5f25e3b04928df98b4ff9b7db750fe0
+SHA1: ce1985399cc0436647311d49584aa726ba1ffce2
+SHA256: 9c422475cedc276aa2cc846d3ad40ecde2c71c87f0ad6af30b3bc4f5ec521524
+Section: Tweaks
+Description: Unless there are notifications, the device will automatically unlock when valid Face ID is detected
+Author: Spark
+Name: AutoUnlockX
+
+Package: com.spark.snowboard
+Version: 1.4.7-Beta4
+Architecture: iphoneos-arm
+Maintainer: Spark
+Installed-Size: 4892
+Depends: mobilesubstrate, preferenceloader
+Conflicts: anemoneteam.anemone, com.anemonetheming.anemone, winterboard
+Replaces: anemoneteam.anemone, com.anemonetheming.anemone, winterboard
+Provides: anemoneteam.anemone, com.anemonetheming.anemone, winterboard
+Filename: debs/30b16a9c544aea0805f55f1111b4e0aa.deb
+Size: 1565784
+MD5sum: 30b16a9c544aea0805f55f1111b4e0aa
+SHA1: 01d0c4400516bc326f76705eac28cc5bc9da859c
+SHA256: 3aa25faa61fc8939f950af1aa3b8de1f7493ee6e2837ab11fa3318a526af30b4
+Section: Tweaks
+Description: Snowboard theming engine
+Author: Spark & Dennis D. Bednarz
+Name: SnowBoard
+
+Package: com.tigisoftware.filza
+Version: 4.0.1-3
+Architecture: iphoneos-arm
+Maintainer: BigBoss <bigboss@thebigboss.org>
+Installed-Size: 31815
+Depends: firmware (>= 7.0), zip, unzip, gzip, unrar, p7zip
+Conflicts: com.tigisoftware.filza64bit, com.tigisoftware.filza39
+Filename: debs/filza_4.0.1-3.deb
+Size: 10215790
+MD5sum: 60322f74b0e669a35c04e3d864241e1e
+SHA1: 5f55e3c714ee9e81bad34bebb279201490014bd6
+SHA256: 4482445297cce926faede628d911bfc99ec0de5fafcea94e569dc59f6c169341
 Section: Utilities
-Description: Downgrade iOS apps easily on-device
-Author: Mineek
-Name: MuffinStore
+Priority: optional
+Homepage: http://moreinfo.thebigboss.org/moreinfo/depiction.php?file=filzafilemanagerDp
+Description: File Manager for iPhone, iPad, iPod Touch. Supports iOS 7+
+Tag: purpose::uikit
+Author: TIGI Software <satashi2009@gmail.com>
+Depiction: http://moreinfo.thebigboss.org/moreinfo/depiction.php?file=filzafilemanagerDp
+Dev: satashi2009
+Icon: file:///Applications/Filza.app/AppIcon57x57.png
+Name: Filza File Manager
+Sponsor: thebigboss.org <http://thebigboss.org>
+
+Package: com.tr1fecta.weatherground
+Version: 1.4
+Architecture: iphoneos-arm
+Maintainer: Tr1Fecta <tr1fecta@pm.me>
+Installed-Size: 324
+Depends: mobilesubstrate
+Filename: debs/com.tr1fecta.weatherground_1.4_iphoneos-arm.deb
+Size: 26684
+MD5sum: 57d30c4f11de80df0987febfd5a94817
+SHA1: 6f38716f72655dfd601346c466418fb05c1851c9
+SHA256: 58d1c00beaa58bc3281a19adf03cf4f7b58fde36a4ba7530d5ac298638ef8cfd
+Section: Tweaks
+Description: Weather right at your fingertips!
+Tag: compatible_min::ios13.0
+Author: Tr1Fecta <tr1fecta@pm.me>
+Depiction: https://chariz.com/get/weatherground
+Icon: https://chariz.com/cdn/icon/weatherground/icon@3x.png
+Name: WeatherGround
+
+Package: com.xandesign.FelicityPro
+Version: 3.3
+Architecture: iphoneos-arm
+Maintainer: XerusDesign <unixdesignios@gmail.com>
+Replaces: com.twickd.xerusdesign.felicity-pro
+Filename: debs/e45adef96c578a17b4247fd47a32a0ff.deb
+Size: 14919164
+MD5sum: e45adef96c578a17b4247fd47a32a0ff
+SHA1: 4f984647f378ed8124601ff7612431fb6808993f
+SHA256: 89f1c1df2f4d681ce8d6bee7ea1ae1c941d5875ed44365f5c354588c52cffbd2
+Section: Themes
+Homepage: https://twitter.com/xerusdesign
+Description: Felicity, but Pro.
+Author: XerusDesign <unixdesignios@gmail.com>
+Name: Felicity Pro
+
+Package: jp.soh.reprovision
+Version: 0.8.4~release
+Architecture: iphoneos-arm
+Maintainer: Soh Satoh
+Depends: firmware (>= 9.0)
+Conflicts: com.matchstic.reprovision
+Filename: debs/jp.soh.reprovision_0.8.4~release_iphoneos-arm.deb
+Size: 16816862
+MD5sum: 226e27fc058aa29af55ecccd267e9382
+SHA1: d14a5acbdeca38cda60a787e023c598d5a1fc10c
+SHA256: 84b3d28914e078176578f184ec29d10c7dfc0a1fa8e794934749ddcbab47586b
+Section: Applications
+Priority: optional
+Description: Re-sign applications on your device
+Author: Soh Satoh, Matt Clarke
+Dev: Matt Clarke
+Icon: file:///Applications/ReProvision.app/AppIcon60x60@2x.png
+Name: ReProvision Reborn
+
+Package: me.conorthedev.shylabels13
+Version: 1.4
+Architecture: iphoneos-arm
+Maintainer: ConorTheDev
+Installed-Size: 400
+Depends: mobilesubstrate, preferenceloader
+Replaces: com.noisyflake.shylabels
+Provides: com.noisyflake.shylabels
+Filename: debs/f147eb0f7ee5151fa5b37f3ee6ee77ac.deb
+Size: 57866
+MD5sum: f147eb0f7ee5151fa5b37f3ee6ee77ac
+SHA1: 8f0fdf6d516245c1e2c07e3a1a10096b563935a7
+SHA256: 10695445cdb16332b33816cd48e4dec6000c52e9e94dffbc05cefe72c8bc7b86
+Section: Tweaks
+Description: Hide your app labels when not scrolling
+Author: ConorTheDev + NoisyFlake
+Name: ShyLabels
+
+Package: me.lau.atria
+Version: 1.4.1
+Architecture: iphoneos-arm
+Maintainer: ren7995 <lau7995ren@gmail.com>
+Installed-Size: 877
+Depends: firmware (>= 13.0), mobilesubstrate, preferenceloader, ws.hbang.alderis (>= 1.1)
+Conflicts: com.irepo.boxy4, me.kritanta.homepluspro
+Filename: debs/me.lau.atria_1.4.1_iphoneos-arm.deb
+Size: 241122
+MD5sum: 2ea1294cba60bdf6e97ffa3dd7e73a33
+SHA1: 7455549d3cb75f50d524c433ff2a3f6c3743799d
+SHA256: 1f0a58d60dc19c2e7d7d4a731a1943504d206699bce173cb9d27dc2fd8d575a6
+Section: Tweaks
+Description: A proper homescreen layout editor for iOS 13-16
+Tag: compatible_min::ios13.0
+Author: ren7995 <lau7995ren@gmail.com>
+Depiction: https://chariz.com/get/atria
+Icon: https://img.chariz.cloud/icon/atria/icon@3x.png
+Name: Atria
+
+Package: me.nepeta.axon
+Version: 1.4
+Architecture: iphoneos-arm
+Maintainer: Baw Appie
+Installed-Size: 584
+Depends: mobilesubstrate, firmware (>= 11.0)
+Conflicts: io.ominousness.stackxi, com.thomasfinch.priorityhub, com.ioscreatix.intelixbeta, com.ioscreatix.intelix, com.spiritoflogic.ncunify, com.spiritoflogic.unifyx, com.hidan.nclink10, org.coolstar.ventana-modern, org.coolstar.ventana, org.s1ris.spinxi
+Filename: debs/me.nepeta.axon.deb
+Size: 145746
+MD5sum: 91ddbd4b90858c3da9afba32af6d6d6b
+SHA1: bbe4e05a992395e8c8a93a0f4983f8626ce3253c
+SHA256: 2232de6f2bd9d045252189f911d0f9d4a2b5b48f7d6f735a4ad0a9913a47d856
+Section: Tweaks
+Description: Priority Hub for iOS 11 and 12
+Author: Nepeta & Baw Appie
+Name: Axon
+
+Package: org.altervista.exilecom.icleaner
+Version: 7.10.0
+Architecture: iphoneos-arm
+Maintainer: BigBoss <bigboss@thebigboss.org>
+Installed-Size: 8217
+Pre-Depends: firmware (>= 4.0), apt | apt7, findutils
+Filename: debs/icleaner_7.10.0.deb
+Size: 2446940
+MD5sum: 4c9b7f7b22f6dc30faa0066a350c6c21
+SHA1: 6efb68d54f18921885f5cd18b30710ffe7daa27c
+SHA256: 751ef15952b2eae96556601ad4514507cda474d1ccbf30980be3aa72e307e6c1
+Section: Utilities
+Homepage: http://moreinfo.thebigboss.org/moreinfo/depiction.php?file=icleanerDp
+Description: The first real iOS system cleanup and management utility
+Tag: purpose::uikit
+Author: Ivano Bilenchi <support@ib-soft.net>
+Depiction: http://moreinfo.thebigboss.org/moreinfo/depiction.php?file=icleanerDp
+Dev: exilecom
+Icon: file:///Applications/iCleaner.app/Icon.png
+Name: iCleaner
+
+Package: org.coolstar.sileo
+Version: 1.9.1
+Architecture: iphoneos-arm
+Maintainer: CoolStar <coolstarorganization@gmail.com>
+Pre-Depends: debianutils, dpkg (>= 1.18)
+Depends: apt (>= 1.8.0), apt (>= 2.1.0) | apt-lib (>= 1.8.0-sileo) | libapt (>=1.8.2-sileo2), apt (>= 2.1.0) | apt-key (>= 1.8.0), dpkg (>= 1.19.2-4), procursus-keyring | cydia, zsh | bash, cy+cpu.arm64, firmware(>=12.2) | org.swift.libswift (>=5.0)
+Conflicts: cydia-gui (<<99.0)
+Filename: debs/org.coolstar.sileo_1.9.1_iphoneos-arm.deb
+Size: 3168080
+MD5sum: 14241bca5be2e09123a198f26832e211
+SHA1: bf9187e0614d7d477ed3c8a093a6bbf421a9623e
+SHA256: f8a03903ef9eb9307e1cd8209b175be992945b406056f1252d22f4ddf1de7c7a
+Section: Packaging
+Priority: required
+Description: A proper APT client for iOS 11 and higher. (View this package in Sileo to see the full depiction)
+Tag: cydia::essential
+Author: Sileo Team <getsileoapp@gmail.com>
+Icon: https://getsileo.app/img/icon.png
+Name: Sileo
+Sileodepiction: https://featuredpage.getsileo.app/depiction.json
+
+Package: trevir.Discord
+Version: 0.8.5
+Architecture: iphoneos-arm
+Maintainer: InvoxiPlayGames <webmaster@invoxiplaygames.uk
+Depends: firmware (>=5.0)
+Filename: debs/discordclassic-0.8.5.deb
+Size: 819392
+MD5sum: a0c2471c860114d3d7d76ba7e1b7e61b
+SHA1: 9dc57ee4d8153fb90f03f08e5f0cbbb7aee8e2b4
+SHA256: 26d3e7b7f46286439774f358b0958e3eaaf53808a640fa06db9fdf7ba8a44bcc
+Section: Social
+Description: Discord client for iOS 5 & 6 by Trevir
+Author: Trevir <triveri@outlook.com>
+Depiction: http://cydia.invoxiplaygames.uk/dp/classicdiscord.php
+Icon: file:///Applications/Discord.app/Icon@2x.png
+Name: Discord Classic
+
+Package: uk.invoxiplaygames.checkmatestore
+Version: 1.2
+Architecture: iphoneos-arm
+Maintainer: InvoxiPlayGames <webmaster@invoxiplaygames.uk>
+Installed-Size: 164
+Depends: mobilesubstrate, firmware (>= 2.0)
+Filename: debs/checkmatestore-1.2.deb
+Size: 5200
+MD5sum: 5245fc6431aadd77110a226b8f0d9ee8
+SHA1: 1330e7a5c051c6dfbff558184de78accecb19032
+SHA256: 0863fee434c9a1aed89696655b4075aa3edde2b2ad3ee2a0e99a99428c17ffe3
+Section: Tweaks
+Description: Disable capability limits in the App Store.
+Author: InvoxiPlayGames <webmaster@invoxiplaygames.uk>
+Depiction: http://cydia.invoxiplaygames.uk/dp/checkmatestore.php
+Name: Checkmate, Store!
+
+Package: xyz.burritoz.thomz.multiplalite
+Version: 2.0.0~lite-1
+Architecture: iphoneos-arm
+Maintainer: Thomz and ren7995 <lau7995ren@gmail.com>
+Installed-Size: 1308
+Depends: firmware (>= 13.0), mobilesubstrate, preferenceloader
+Conflicts: com.peppa.Primo, com.eswick.harbor7, xyz.burritoz.thomz.multipla
+Replaces: xyz.burritoz.thomz.multipla
+Filename: debs/xyz.burritoz.thomz.multiplalite_2.0.0~lite-1_iphoneos-arm.deb
+Size: 497990
+MD5sum: c8046dc58376dbf3d20b0db12824cd30
+SHA1: 05022b88f9c633aa3f415113e3b1f0c1a3aebd7b
+SHA256: 967b8832f5e7508a13ecb50a72c04df084371d634a2da421b72901932478f22b
+Section: Tweaks
+Description: Power to your Dock
+Tag: compatible_min::ios13.0
+Author: Thomz and ren7995 <lau7995ren@gmail.com>
+Depiction: https://chariz.com/get/multipla-lite
+Icon: https://chariz.com/cdn/icon/multipla-lite/icon@3x.png
+Name: Multipla Lite
+
+Package: xyz.willy.zebra
+Version: 1.1.36
+Architecture: iphoneos-arm
+Maintainer: Zebra Team <team@getzbra.com>
+Installed-Size: 15032
+Depends: dpkg, uikittools, firmware (>= 9.0)
+Filename: debs/xyz.willy.zebra_1.1.36_iphoneos-arm.deb
+Size: 8451692
+MD5sum: f28880aa6be9a0556000cc7f58c5c3ad
+SHA1: 06e3fcec78dba4e3450a0dac0c27bc0af75bd8a7
+SHA256: e724e4e45807880b9a4122100e89c4ea8326ce56dd3223abbbb01757779d5f5f
+Section: Packaging
+Description: A Useful Package Manager
+Tag: compatible::9.0-16.6
+Author: Zebra Team <team@getzbra.com>
+Depiction: https://getzbra.com/repo/depictions/xyz.willy.Zebra/
+Icon: file:///Applications/Zebra.app/AppIcon60x60@3x.png
+Name: Zebra
+Support: https://getzbra.com/repo/depictions/xyz.willy.Zebra/bug_report.html
 
