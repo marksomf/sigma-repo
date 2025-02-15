@@ -1,7 +1,7 @@
 Architectures: iphoneos-arm
 Codename: sigma-repo
 Components: main
-Description: MarkSigma's official repo, only certified sigmas can use it
+Description: MarkSigma's official repo, only certified sigmas are allowed to use it.
 Label: MarkSigma
 Origin: MarkSigma
 Suite: stable
