@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>About Me - MarkSigma's Repo</title>
+    <title>Guides - MarkSigma's Repo</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://fonts.googleapis.com/css?family=Montserrat:700&display=swap" rel="stylesheet">
     <style>
@@ -91,65 +91,29 @@
         .overlay.active {
             display: block;
         }
-        .about-container {
+        .guides-container {
             max-width: 600px;
-            margin: 90px auto 0 auto;
+            margin: 110px auto 0 auto;
             background: #fff;
             border-radius: 12px;
             box-shadow: 0 2px 8px rgba(0,0,0,0.08);
-            padding: 40px 30px;
+            padding: 50px 30px;
             text-align: center;
         }
-        .about-container img {
-            width: 100px;
-            height: 100px;
-            border-radius: 50%;
-            object-fit: cover;
-            border: 3px solid #007aff;
-            margin-bottom: 20px;
+        .guides-container h1 {
+            font-family: 'Montserrat', 'SF Pro Display', 'Segoe UI', 'Roboto', 'Arial', sans-serif;
+            color: #007aff;
+            margin-bottom: 18px;
         }
-        .about-container h1 {
-            margin-bottom: 10px;
+        .guides-container p {
+            font-size: 1.2em;
+            color: #666;
         }
-        .about-container p {
-            font-size: 1.1em;
-            line-height: 1.7;
-        }
-        .social-buttons {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            gap: 12px;
-            margin-top: 24px;
-        }
-        .social-btn {
-            display: flex;
-            align-items: center;
-            gap: 8px;
-            padding: 10px 18px;
-            border-radius: 8px;
-            text-decoration: none;
-            color: #fff;
-            font-weight: 500;
-            font-size: 1em;
-            transition: background 0.2s, box-shadow 0.2s;
-            box-shadow: 0 2px 8px rgba(0,0,0,0.06);
-        }
-        .social-btn img {
-            width: 22px;
-            height: 22px;
-        }
-        .social-btn.youtube { background: #ff0000; }
-        .social-btn.twitter { background: #1da1f2; }
-        .social-btn.instagram { background: #e1306c; }
-        .social-btn.discord { background: #5865f2; cursor: default; }
-        .social-btn:hover:not(.discord) { opacity: 0.85; }
         body { padding-top: 60px; }
     </style>
 </head>
 <body>
     <div class="banner">jailbreaking is great!</div>
-    <!-- Hamburger Menu -->
     <div class="hamburger" onclick="toggleMenu()">
         <span></span>
         <span></span>
@@ -160,38 +124,15 @@
             <li><a href="index.html">Home</a></li>
             <li><a href="add-repo.html">Add Repo</a></li>
             <li><a href="tweaks-list.html">Tweaks</a></li>
+            <li><a href="guides.html">Guides</a></li>
             <li><a href="about.html">About Me</a></li>
             <li><a href="credits.html">Credits</a></li>
-            <li><a href="guides.html">Guides</a></li>
-
         </ul>
     </div>
     <div class="overlay" id="overlay" onclick="toggleMenu()"></div>
-    <div class="about-container">
-        <img src="profile.jpg" alt="Mark's Profile Picture">
-        <h1>Hey, I’m Mark!</h1>
-        <p>
-            I’m a passionate iOS customizer and a jailbreaker from Switzerland. My goal is to develop an <strong>AWESOME repo</strong>, that everyone can use — not just me.<br><br>
-            You’ll often find me coding, playing with jailbreaks, or messing around with iPhones. I hope you enjoy the tweaks and ideas I share in this repo.<br><br>
-            Thanks for stopping by! 🚀
-        </p>
-        <div class="social-buttons">
-            <a href="https://youtube.com/@applehelpermark" class="social-btn youtube" target="_blank">
-                <img src="icons/youtube.png" alt="YouTube"> @applehelpermark
-            </a>
-            <a href="https://x.com/@applehelpermark" class="social-btn twitter" target="_blank">
-                <img src="icons/twitter.png" alt="Twitter"> @applehelpermark
-            </a>
-            <a href="https://www.instagram.com/mark_collection_prv/" class="social-btn instagram" target="_blank">
-                <img src="icons/instagram.png" alt="Instagram"> @mark_collection_prv
-            </a>
-            <span class="social-btn discord">
-                <img src="icons/discord.png" alt="Discord"> mark_ios7
-            </span>
-            <div style="margin-top:16px;font-size:1.05em;">
-                <strong>ATTENTION: THESE TWEAKS WEREN'T DEVELOPED BY ME! PLEASE GO SUPPORT THE ORIGINAL DEVELOPERS IF YOU FOUND THESE TWEAKS USEFUL. THANKS.</strong>
-            </div>
-        </div>
+    <div class="guides-container">
+        <h1>Guides</h1>
+        <p>Nothing to see here yet!</p>
     </div>
     <script>
         function toggleMenu() {
