@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Credits - MarkSigma's Repo</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f2f2f7;
+            color: #333;
+        }
+        .banner {
+            width: 100%;
+            background: #f8fafc;
+            color: #007aff;
+            text-align: center;
+            padding: 16px 0 12px 0;
+            font-family: 'Montserrat', 'SF Pro Display', 'Segoe UI', 'Roboto', 'Arial', sans-serif;
+            font-weight: 700;
+            font-size: 1.4em;
+            letter-spacing: 2px;
+            text-shadow: 0 2px 8px rgba(0,0,0,0.06), 0 1px 0 #fff;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+            position: fixed;
+            top: 0;
+            left: 0;
+            z-index: 1500;
+            border-bottom: 1px solid #e3e8ee;
+        }
+        .menu-container {
+            position: fixed;
+            top: 48px;
+            left: 0;
+            height: 100%;
+            width: 250px;
+            background-color: #fff;
+            box-shadow: 2px 0 5px rgba(0,0,0,0.1);
+            transform: translateX(-250px);
+            transition: transform 0.3s ease;
+            z-index: 1000;
+        }
+        .menu-container.active {
+            transform: translateX(0);
+        }
+        .hamburger {
+            position: fixed;
+            top: 60px;
+            left: 20px;
+            width: 30px;
+            height: 30px;
+            cursor: pointer;
+            z-index: 1001;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+        }
+        .hamburger span {
+            width: 100%;
+            height: 3px;
+            background-color: #007aff;
+            transition: all 0.3s ease;
+        }
+        .menu-items {
+            padding: 60px 0 0 0;
+            list-style: none;
+        }
+        .menu-items li {
+            padding: 15px 20px;
+            border-bottom: 1px solid #f2f2f2;
+        }
+        .menu-items li a {
+            color: #333;
+            text-decoration: none;
+            font-size: 16px;
+            display: block;
+        }
+        .overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0,0,0,0.5);
+            display: none;
+            z-index: 999;
+        }
+        .overlay.active {
+            display: block;
+        }
+        .credits-container {
+            max-width: 900px;
+            margin: 90px auto 0 auto;
+            background: #fff;
+            border-radius: 12px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+            padding: 40px 30px;
+        }
+        .credits-container h1 {
+            text-align: center;
+            margin-bottom: 30px;
+            font-family: 'Montserrat', 'SF Pro Display', 'Segoe UI', 'Roboto', 'Arial', sans-serif;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            background: #fff;
+        }
+        th, td {
+            text-align: left;
+            padding: 12px 8px;
+        }
+        th {
+            background: #f2f2f7;
+        }
+        tr:nth-child(even) {
+            background: #f9f9fb;
+        }
+        @media (max-width: 600px) {
+            .credits-container {
+                padding: 20px 5px;
+            }
+            table, th, td {
+                font-size: 0.95em;
+            }
+        }
+        body { padding-top: 60px; }
+    </style>
+</head>
+<body>
+    <div class="banner">jailbreaking is great!</div>
+    <!-- Hamburger Menu -->
+    <div class="hamburger" onclick="toggleMenu()">
+        <span></span>
+        <span></span>
+        <span></span>
+    </div>
+    <div class="menu-container" id="menu">
+        <ul class="menu-items">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="add-repo.html">Add Repo</a></li>
+            <li><a href="tweaks-list.html">Tweaks</a></li>
+            <li><a href="about.html">About Me</a></li>
+            <li><a href="credits.html">Credits</a></li>
+        </ul>
+    </div>
+    <div class="overlay" id="overlay" onclick="toggleMenu()"></div>
+    <div class="credits-container">
+        <h1>Credits</h1>
+        <table>
+            <thead>
+                <tr>
+                    <th>Tweak Developer</th>
+                    <th>Tweaks</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr><td>Karen/あけみ, Linus Yang</td><td>AppSync Unified</td></tr>
+                <tr><td>biteSMS</td><td>biteSMS</td></tr>
+                <tr><td>Ayden Panhuyzen, Dynastic</td><td>ShortLook</td></tr>
+                <tr><td>BigBoss, Afnan Ahmad</td><td>ChromaHomeBarX</td></tr>
+                <tr><td>Alpha_Stream</td><td>Linear for Status Bar</td></tr>
+                <tr><td>BigBoss, Ash Apps</td><td>Wifi Passwords List</td></tr>
+                <tr><td>Boo</td><td>AirPort, AirPort (iOS 13)</td></tr>
+                <tr><td>Brogan Miner</td><td>RoundDock</td></tr>
+                <tr><td>CreatureSurvive</td><td>shuffle</td></tr>
+                <tr><td>BigBoss, Dan Saba</td><td>Power Tap</td></tr>
+                <tr><td>HackYouriPhone, anondev</td><td>LocalIAPStore</td></tr>
+                <tr><td>KJCracks</td><td>Clutch 2.0.4</td></tr>
+                <tr><td>LaughingQuoll</td><td>Siliqua Pro</td></tr>
+                <tr><td>Jay Freeman (saurik)</td><td>Cydia Eraser, OpenSSH, OpenSSL</td></tr>
+                <tr><td>BigBoss, Ruphane</td><td>PodsGrant</td></tr>
+                <tr><td>MrGcGamer</td><td>ColorMeNotifs</td></tr>
+                <tr><td>Muirey03</td><td>Amandus, Cr4shed, Flow, Minotaur</td></tr>
+                <tr><td>Alban Diquet</td><td>SSL Kill Switch 2</td></tr>
+                <tr><td>Nyan Satan</td><td>Way Out, dualbootstuff</td></tr>
+                <tr><td>BigBoss, lordscotland</td><td>MTerminal</td></tr>
+                <tr><td>BigBoss, opa334</td><td>Choicy</td></tr>
+                <tr><td>BigBoss, Reed Weichler</td><td>Cylinder</td></tr>
+                <tr><td>BigBoss, rbt</td><td>BatteryLife</td></tr>
+                <tr><td>Riley Testut</td><td>AltDaemon</td></tr>
+                <tr><td>Ryan Nair</td><td>Cylinder Reborn</td></tr>
+                <tr><td>BigBoss, shepgoba</td><td>BatteryHomeBar</td></tr>
+                <tr><td>shiftcmdk</td><td>PencilChargingIndicator</td></tr>
+                <tr><td>Spark</td><td>AutoUnlockX, SnowBoard</td></tr>
+                <tr><td>BigBoss, TIGI Software</td><td>Filza File Manager</td></tr>
+                <tr><td>Tr1Fecta</td><td>WeatherGround</td></tr>
+                <tr><td>XerusDesign</td><td>Felicity Pro</td></tr>
+                <tr><td>Preloading, SpaceSaver2000-1</td><td>Retranslate</td></tr>
+                <tr><td>ubik</td><td>Sonus12</td></tr>
+                <tr><td>Carsten Heinelt</td><td>iFile</td></tr>
+                <tr><td>KawaiiZenbo, OldWorldOrder</td><td>iFile/MTerminal icon fix</td></tr>
+                <tr><td>Pangu</td><td>Pangu 7.1-7.1.x Untether</td></tr>
+                <tr><td>BigBoss, Lance Fetters (ashikase)</td><td>ShowCase</td></tr>
+                <tr><td>Soh Satoh, Matt Clarke</td><td>ReProvision Reborn</td></tr>
+                <tr><td>ConorTheDev, NoisyFlake</td><td>ShyLabels</td></tr>
+                <tr><td>ren7995</td><td>Atria</td></tr>
+                <tr><td>Baw Appie, Nepeta & Baw Appie</td><td>Axon</td></tr>
+                <tr><td>Karen/あけみ, Dissident</td><td>AppSync for iOS 4.0</td></tr>
+                <tr><td>Karen/あけみ (angelXwind)</td><td>mikoto</td></tr>
+                <tr><td>BigBoss, Lunatik</td><td>Software Update Killer</td></tr>
+                <tr><td>Elias Limneos</td><td>CallBar XS (iOS 12/13/14)</td></tr>
+                <tr><td>BigBoss, Ivano Bilenchi</td><td>iCleaner</td></tr>
+                <tr><td>CoolStar, Sileo Team</td><td>Sileo</td></tr>
+                <tr><td>BigBoss, Sam Bingner</td><td>PreferenceLoader</td></tr>
+                <tr><td>InvoxiPlayGames, Trevir</td><td>Discord Classic</td></tr>
+                <tr><td>InvoxiPlayGames</td><td>Checkmate, Store!</td></tr>
+                <tr><td>Thomz and ren7995</td><td>Multipla Lite</td></tr>
+                <tr><td>Zebra Team</td><td>Zebra</td></tr>
+            </tbody>
+        </table>
+    </div>
+    <script>
+        function toggleMenu() {
+            document.getElementById('menu').classList.toggle('active');
+            document.getElementById('overlay').classList.toggle('active');
+        }
+    </script>
+</body>
+</html>

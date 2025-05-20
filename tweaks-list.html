@@ -1,0 +1,999 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tweaks List - MarkSigma's Repo</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f2f2f7;
+            color: #333;
+        }
+        .banner {
+            width: 100%;
+            background: #f8fafc;
+            color: #007aff;
+            text-align: center;
+            padding: 16px 0 12px 0;
+            font-family: 'Montserrat', 'SF Pro Display', 'Segoe UI', 'Roboto', 'Arial', sans-serif;
+            font-weight: 700;
+            font-size: 1.4em;
+            letter-spacing: 2px;
+            text-shadow: 0 2px 8px rgba(0,0,0,0.06), 0 1px 0 #fff;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+            position: fixed;
+            top: 0;
+            left: 0;
+            z-index: 1500;
+            border-bottom: 1px solid #e3e8ee;
+        }
+        .menu-container {
+            position: fixed;
+            top: 48px;
+            left: 0;
+            height: 100%;
+            width: 250px;
+            background-color: #fff;
+            box-shadow: 2px 0 5px rgba(0,0,0,0.1);
+            transform: translateX(-250px);
+            transition: transform 0.3s ease;
+            z-index: 1000;
+        }
+        .menu-container.active {
+            transform: translateX(0);
+        }
+        .hamburger {
+            position: fixed;
+            top: 60px;
+            left: 20px;
+            width: 30px;
+            height: 30px;
+            cursor: pointer;
+            z-index: 1001;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+        }
+        .hamburger span {
+            width: 100%;
+            height: 3px;
+            background-color: #007aff;
+            transition: all 0.3s ease;
+        }
+        .menu-items {
+            padding: 60px 0 0 0;
+            list-style: none;
+        }
+        .menu-items li {
+            padding: 15px 20px;
+            border-bottom: 1px solid #f2f2f2;
+        }
+        .menu-items li a {
+            color: #333;
+            text-decoration: none;
+            font-size: 16px;
+            display: block;
+        }
+        .overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0,0,0,0.5);
+            display: none;
+            z-index: 999;
+        }
+        .overlay.active {
+            display: block;
+        }
+        .header {
+            display: flex;
+            align-items: center;
+            padding: 90px 20px 20px;
+            background-color: #fff;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        .header-profile-picture {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 2px solid #007aff;
+            margin-right: 15px;
+        }
+        .search-filter-container {
+            background-color: #fff;
+            padding: 20px;
+            margin: 20px;
+            border-radius: 10px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        .search-container {
+            display: flex;
+            margin-bottom: 15px;
+        }
+        .search-container input {
+            flex-grow: 1;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-right: none;
+            border-radius: 5px 0 0 5px;
+            font-size: 16px;
+        }
+        .search-container button {
+            padding: 10px 15px;
+            background-color: #007aff;
+            color: white;
+            border: none;
+            border-radius: 0 5px 5px 0;
+            cursor: pointer;
+        }
+        .filter-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+        .filter-container select {
+            padding: 8px 12px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 14px;
+        }
+        .tweaks-container {
+            padding: 20px;
+        }
+        .tweak-card {
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            padding: 15px;
+            margin-bottom: 15px;
+            transition: transform 0.2s;
+        }
+        .tweak-card:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+        }
+        .tweak-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 10px;
+        }
+        .tweak-name {
+            font-size: 18px;
+            font-weight: bold;
+        }
+        .tweak-version {
+            background-color: #f2f2f7;
+            padding: 3px 8px;
+            border-radius: 10px;
+            font-size: 12px;
+        }
+        .tweak-description {
+            margin-bottom: 10px;
+            line-height: 1.4;
+        }
+        .tweak-meta {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            font-size: 12px;
+        }
+        .tweak-meta span {
+            background-color: #f2f2f7;
+            padding: 3px 8px;
+            border-radius: 10px;
+        }
+        .ios-compatible {
+            color: #4caf50;
+        }
+        body { padding-top: 60px; }
+    </style>
+</head>
+<body>
+    <div class="banner">jailbreaking is great!</div>
+    <!-- Hamburger Menu -->
+    <div class="hamburger" onclick="toggleMenu()">
+        <span></span>
+        <span></span>
+        <span></span>
+    </div>
+    <div class="menu-container" id="menu">
+        <ul class="menu-items">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="add-repo.html">Add Repo</a></li>
+            <li><a href="tweaks-list.html">Tweaks</a></li>
+            <li><a href="about.html">About Me</a></li>
+            <li><a href="credits.html">Credits</a></li>
+        </ul>
+    </div>
+    <div class="overlay" id="overlay" onclick="toggleMenu()"></div>
+    <div class="header">
+        <img src="profile.jpg" alt="Profile Picture" class="header-profile-picture">
+        <h2>Tweaks List</h2>
+    </div>
+    <div class="search-filter-container">
+        <div class="search-container">
+            <input type="text" id="searchInput" placeholder="Search tweaks...">
+            <button type="button" onclick="searchTweaks()">Search</button>
+        </div>
+        <div class="filter-container">
+            <select id="iosVersionFilter">
+                <option value="">All iOS Versions</option>
+                <option value="iOS 16">iOS 16</option>
+                <option value="iOS 15">iOS 15</option>
+                <option value="iOS 14">iOS 14</option>
+                <option value="iOS 13">iOS 13</option>
+                <option value="iOS 12">iOS 12</option>
+                <option value="iOS 11">iOS 11</option>
+                <option value="iOS 10">iOS 10</option>
+                <option value="iOS 9">iOS 9</option>
+                <option value="iOS 8">iOS 8</option>
+                <option value="iOS 7">iOS 7</option>
+                <option value="iOS 6">iOS 6</option>
+                <option value="iOS 5">iOS 5</option>
+            </select>
+        </div>
+    </div>
+    <div class="tweaks-container" id="tweaksList">
+
+<!-- TWEAKS START -->
+
+<div class="tweak-card" data-ios="iOS 5,iOS 6,iOS 7,iOS 8,iOS 9,iOS 10,iOS 11,iOS 12,iOS 13,iOS 14,iOS 15,iOS 16">
+    <div class="tweak-header">
+        <div class="tweak-name">AppSync Unified</div>
+    </div>
+    <div class="tweak-description">
+        Enables the ability to install unsigned/fakesigned iOS applications.
+    </div>
+    <div class="tweak-meta">
+        <span class="ios-compatible">iOS 5.0 to iOS 16.5.1</span>
+        <span>Developer: Karen/あけみ, Linus Yang</span>
+    </div>
+</div>
+<div class="tweak-card" data-ios="">
+    <div class="tweak-header">
+        <div class="tweak-name">biteSMS</div>
+    </div>
+    <div class="tweak-description">
+        Feature-rich replacement for the built-in Messages app, with Quick Reply, Quick Compose, Scheduled Messages, and more.
+    </div>
+    <div class="tweak-meta">
+        <span class="ios-compatible"></span>
+        <span>Developer: biteSMS</span>
+    </div>
+</div>
+<div class="tweak-card" data-ios="iOS 11,iOS 12,iOS 13,iOS 14,iOS 15,iOS 16">
+    <div class="tweak-header">
+        <div class="tweak-name">ShortLook</div>
+    </div>
+    <div class="tweak-description">
+        Beautiful notification previews for your lock screen.
+    </div>
+    <div class="tweak-meta">
+        <span class="ios-compatible">iOS 11.0+</span>
+        <span>Developer: Ayden Panhuyzen, Dynastic</span>
+    </div>
+</div>
+<div class="tweak-card" data-ios="iOS 11,iOS 12,iOS 13,iOS 14,iOS 15,iOS 16">
+    <div class="tweak-header">
+        <div class="tweak-name">ChromaHomeBarX</div>
+    </div>
+    <div class="tweak-description">
+        Razer Chroma inspired HomeBar coloring tweak for iPhone X, also works with LittleX.
+    </div>
+    <div class="tweak-meta">
+        <span class="ios-compatible">iOS 11.0+</span>
+        <span>Developer: BigBoss, Afnan Ahmad</span>
+    </div>
+</div>
+<div class="tweak-card" data-ios="iOS 12,iOS 13,iOS 14,iOS 15,iOS 16">
+    <div class="tweak-header">
+        <div class="tweak-name">Linear for Status Bar</div>
+    </div>
+    <div class="tweak-description">
+        Minimal status bar icons in a form of lines.
+    </div>
+    <div class="tweak-meta">
+        <span class="ios-compatible">iOS 12.0+</span>
+        <span>Developer: Alpha_Stream</span>
+    </div>
+</div>
+<div class="tweak-card" data-ios="iOS 7,iOS 8,iOS 9,iOS 10">
+    <div class="tweak-header">
+        <div class="tweak-name">Wifi Passwords List</div>
+    </div>
+    <div class="tweak-description">
+        View saved WiFi passwords and other info.
+    </div>
+    <div class="tweak-meta">
+        <span class="ios-compatible">iOS 7.0 to iOS 10.3.4</span>
+        <span>Developer: BigBoss, Ash Apps</span>
+    </div>
+</div>
+<div class="tweak-card" data-ios="iOS 11,iOS 12,iOS 13,iOS 14,iOS 15,iOS 16">
+    <div class="tweak-header">
+        <div class="tweak-name">AirPort</div>
+    </div>
+    <div class="tweak-description">
+        The Ultimate AirPods Customization Tweak.
+    </div>
+    <div class="tweak-meta">
+        <span class="ios-compatible">iOS 11.0+</span>
+        <span>Developer: Boo</span>
+    </div>
+</div>
+<div class="tweak-card" data-ios="iOS 13,iOS 14,iOS 15,iOS 16">
+    <div class="tweak-header">
+        <div class="tweak-name">AirPort (iOS 13)</div>
+    </div>
+    <div class="tweak-description">
+        The Ultimate AirPods Customization Tweak (iOS 13+ version).
+    </div>
+    <div class="tweak-meta">
+        <span class="ios-compatible">iOS 13.0+</span>
+        <span>Developer: Boo</span>
+    </div>
+</div>
+<div class="tweak-card" data-ios="iOS 7,iOS 8,iOS 9,iOS 10">
+    <div class="tweak-header">
+        <div class="tweak-name">RoundDock</div>
+    </div>
+    <div class="tweak-description">
+        Gives your dock a rounded look.
+    </div>
+    <div class="tweak-meta">
+        <span class="ios-compatible">iOS 7.0 to iOS 10.3.4</span>
+        <span>Developer: Brogan Miner</span>
+    </div>
+</div>
+<div class="tweak-card" data-ios="iOS 13,iOS 14,iOS 15,iOS 16">
+    <div class="tweak-header">
+        <div class="tweak-name">shuffle</div>
+    </div>
+    <div class="tweak-description">
+        Organize your Settings app with tabs.
+    </div>
+    <div class="tweak-meta">
+        <span class="ios-compatible">iOS 13.0+</span>
+        <span>Developer: CreatureSurvive</span>
+    </div>
+</div>
+<div class="tweak-card" data-ios="iOS 7,iOS 8,iOS 9">
+    <div class="tweak-header">
+        <div class="tweak-name">Power Tap</div>
+    </div>
+    <div class="tweak-description">
+        Adds extra power options to the power down slider.
+    </div>
+    <div class="tweak-meta">
+        <span class="ios-compatible">iOS 7.1 to iOS 9.3.6</span>
+        <span>Developer: BigBoss, Dan Saba</span>
+    </div>
+</div>
+<div class="tweak-card" data-ios="iOS 6,iOS 7,iOS 8,iOS 9,iOS 10,iOS 11,iOS 12">
+    <div class="tweak-header">
+        <div class="tweak-name">LocalIAPStore</div>
+    </div>
+    <div class="tweak-description">
+        Enables free in-app purchases for many apps.
+    </div>
+    <div class="tweak-meta">
+        <span class="ios-compatible">iOS 6.0 to iOS 12.5.7</span>
+        <span>Developer: HackYouriPhone, anondev</span>
+    </div>
+</div>
+<div class="tweak-card" data-ios="iOS 6,iOS 7,iOS 8,iOS 9,iOS 10">
+    <div class="tweak-header">
+        <div class="tweak-name">Clutch 2.0.4</div>
+    </div>
+    <div class="tweak-description">
+        CLI tool for cracking iOS apps.
+    </div>
+    <div class="tweak-meta">
+        <span class="ios-compatible">iOS 6.0 to iOS 10.3.4</span>
+        <span>Developer: KJCracks</span>
+    </div>
+</div>
+<div class="tweak-card" data-ios="iOS 11,iOS 12,iOS 13,iOS 14,iOS 15,iOS 16">
+    <div class="tweak-header">
+        <div class="tweak-name">Siliqua Pro</div>
+    </div>
+    <div class="tweak-description">
+        Adds gestures to AirPods.
+    </div>
+    <div class="tweak-meta">
+        <span class="ios-compatible">iOS 11.0+</span>
+        <span>Developer: LaughingQuoll</span>
+    </div>
+</div>
+<div class="tweak-card" data-ios="iOS 7,iOS 8,iOS 9,iOS 10">
+    <div class="tweak-header">
+        <div class="tweak-name">Cydia Eraser</div>
+    </div>
+    <div class="tweak-description">
+        Removes jailbreak and returns device to stock iOS.
+    </div>
+    <div class="tweak-meta">
+        <span class="ios-compatible">iOS 7.1 to iOS 10.3.3</span>
+        <span>Developer: Jay Freeman (saurik)</span>
+    </div>
+</div>
+<div class="tweak-card" data-ios="iOS 13,iOS 14,iOS 15,iOS 16">
+    <div class="tweak-header">
+        <div class="tweak-name">PodsGrant</div>
+    </div>
+    <div class="tweak-description">
+        Customizes AirPods Pro gestures.
+    </div>
+    <div class="tweak-meta">
+        <span class="ios-compatible">iOS 13.0+</span>
+        <span>Developer: BigBoss, Ruphane</span>
+    </div>
+</div>
+<div class="tweak-card" data-ios="iOS 13,iOS 14,iOS 15,iOS 16">
+    <div class="tweak-header">
+        <div class="tweak-name">ColorMeNotifs</div>
+    </div>
+    <div class="tweak-description">
+        Colors your notifications to match the app icon.
+    </div>
+    <div class="tweak-meta">
+        <span class="ios-compatible">iOS 13.0+</span>
+        <span>Developer: MrGcGamer</span>
+    </div>
+</div>
+<div class="tweak-card" data-ios="">
+    <div class="tweak-header">
+        <div class="tweak-name">Amandus</div>
+    </div>
+    <div class="tweak-description">
+        Haptic feedback for passcode entry.
+    </div>
+    <div class="tweak-meta">
+        <span class="ios-compatible"></span>
+        <span>Developer: Muirey03</span>
+    </div>
+</div>
+<div class="tweak-card" data-ios="iOS 9,iOS 10,iOS 11,iOS 12,iOS 13,iOS 14,iOS 15,iOS 16">
+    <div class="tweak-header">
+        <div class="tweak-name">Cr4shed</div>
+    </div>
+    <div class="tweak-description">
+        Crash reporter for iOS.
+    </div>
+    <div class="tweak-meta">
+        <span class="ios-compatible">iOS 9.0+</span>
+        <span>Developer: Muirey03</span>
+    </div>
+</div>
+<div class="tweak-card" data-ios="">
+    <div class="tweak-header">
+        <div class="tweak-name">Flow</div>
+    </div>
+    <div class="tweak-description">
+        Dynamic Now Playing UI for the lock screen.
+    </div>
+    <div class="tweak-meta">
+        <span class="ios-compatible"></span>
+        <span>Developer: Muirey03</span>
+    </div>
+</div>
+<div class="tweak-card" data-ios="">
+    <div class="tweak-header">
+        <div class="tweak-name">Minotaur</div>
+    </div>
+    <div class="tweak-description">
+        Notification banner for incoming calls.
+    </div>
+    <div class="tweak-meta">
+        <span class="ios-compatible"></span>
+        <span>Developer: Muirey03</span>
+    </div>
+</div>
+<div class="tweak-card" data-ios="iOS 6,iOS 7,iOS 8,iOS 9,iOS 10,iOS 11,iOS 12,iOS 13,iOS 14">
+    <div class="tweak-header">
+        <div class="tweak-name">SSL Kill Switch 2</div>
+    </div>
+    <div class="tweak-description">
+        Disables certificate validation for SSL.
+    </div>
+    <div class="tweak-meta">
+        <span class="ios-compatible">iOS 6.0 to iOS 14.2</span>
+        <span>Developer: Alban Diquet</span>
+    </div>
+</div>
+<div class="tweak-card" data-ios="iOS 5,iOS 6,iOS 7,iOS 8,iOS 9,iOS 10,iOS 11,iOS 12,iOS 13,iOS 14,iOS 15,iOS 16">
+    <div class="tweak-header">
+        <div class="tweak-name">Way Out</div>
+    </div>
+    <div class="tweak-description">
+        Adds power options to the power down slider.
+    </div>
+    <div class="tweak-meta">
+        <span class="ios-compatible">iOS 5.0+</span>
+        <span>Developer: Nyan Satan</span>
+    </div>
+</div>
+<div class="tweak-card" data-ios="">
+    <div class="tweak-header">
+        <div class="tweak-name">dualbootstuff</div>
+    </div>
+    <div class="tweak-description">
+        Tools for dual-booting iOS devices.
+    </div>
+    <div class="tweak-meta">
+        <span class="ios-compatible"></span>
+        <span>Developer: Nyan Satan, @danzatt, @winocm, @xerub, @cmwdotme, @axi0mX, @iBSparkes, @ZecOps, @ih8sn0w</span>
+    </div>
+</div>
+<div class="tweak-card" data-ios="iOS 4,iOS 5,iOS 6,iOS 7,iOS 8,iOS 9,iOS 10">
+    <div class="tweak-header">
+        <div class="tweak-name">MTerminal</div>
+    </div>
+    <div class="tweak-description">
+        Terminal emulator for iOS.
+    </div>
+    <div class="tweak-meta">
+        <span class="ios-compatible">iOS 4.0 to iOS 10.3.4</span>
+        <span>Developer: BigBoss, lordscotland</span>
+    </div>
+</div>
+<div class="tweak-card" data-ios="iOS 10,iOS 11,iOS 12,iOS 13,iOS 14,iOS 15,iOS 16">
+    <div class="tweak-header">
+        <div class="tweak-name">Choicy</div>
+    </div>
+    <div class="tweak-description">
+        Per-app tweak toggling and more.
+    </div>
+    <div class="tweak-meta">
+        <span class="ios-compatible">iOS 10.0+</span>
+        <span>Developer: BigBoss, opa334</span>
+    </div>
+</div>
+<div class="tweak-card" data-ios="iOS 3,iOS 4,iOS 5,iOS 6,iOS 7,iOS 8,iOS 9,iOS 10,iOS 11,iOS 12,iOS 13">
+    <div class="tweak-header">
+        <div class="tweak-name">Cylinder</div>
+    </div>
+    <div class="tweak-description">
+        Adds animated page transitions to your home screen.
+    </div>
+    <div class="tweak-meta">
+        <span class="ios-compatible">iOS 3.0 to iOS 13.7</span>
+        <span>Developer: BigBoss, Reed Weichler</span>
+    </div>
+</div>
+<div class="tweak-card" data-ios="iOS 6,iOS 7,iOS 8,iOS 9,iOS 10,iOS 11">
+    <div class="tweak-header">
+        <div class="tweak-name">BatteryLife</div>
+    </div>
+    <div class="tweak-description">
+        Displays detailed battery statistics and health.
+    </div>
+    <div class="tweak-meta">
+        <span class="ios-compatible">iOS 6.0 to iOS 11.4.1</span>
+        <span>Developer: BigBoss, rbt</span>
+    </div>
+</div>
+<div class="tweak-card" data-ios="iOS 12,iOS 13,iOS 14,iOS 15,iOS 16">
+    <div class="tweak-header">
+        <div class="tweak-name">AltDaemon</div>
+    </div>
+    <div class="tweak-description">
+        Allows AltStore to install and refresh apps without a computer.
+    </div>
+    <div class="tweak-meta">
+        <span class="ios-compatible">iOS 12.2+</span>
+        <span>Developer: Riley Testut</span>
+    </div>
+</div>
+<div class="tweak-card" data-ios="iOS 11,iOS 12,iOS 13,iOS 14,iOS 15,iOS 16">
+    <div class="tweak-header">
+        <div class="tweak-name">Cylinder Reborn</div>
+    </div>
+    <div class="tweak-description">
+        Modern rewrite of Cylinder, with more effects.
+    </div>
+    <div class="tweak-meta">
+        <span class="ios-compatible">iOS 11.0+</span>
+        <span>Developer: Ryan Nair</span>
+    </div>
+</div>
+<div class="tweak-card" data-ios="iOS 11,iOS 12,iOS 13,iOS 14,iOS 15,iOS 16">
+    <div class="tweak-header">
+        <div class="tweak-name">BatteryHomeBar</div>
+    </div>
+    <div class="tweak-description">
+        Shows battery level in the HomeBar.
+    </div>
+    <div class="tweak-meta">
+        <span class="ios-compatible">iOS 11.0+</span>
+        <span>Developer: BigBoss, shepgoba</span>
+    </div>
+</div>
+<div class="tweak-card" data-ios="">
+    <div class="tweak-header">
+        <div class="tweak-name">PencilChargingIndicator</div>
+    </div>
+    <div class="tweak-description">
+        Shows a charging indicator for Apple Pencil.
+    </div>
+    <div class="tweak-meta">
+        <span class="ios-compatible"></span>
+        <span>Developer: shiftcmdk</span>
+    </div>
+</div>
+<div class="tweak-card" data-ios="">
+    <div class="tweak-header">
+        <div class="tweak-name">AutoUnlockX</div>
+    </div>
+    <div class="tweak-description">
+        Automatically unlock your device after Face ID authentication.
+    </div>
+    <div class="tweak-meta">
+        <span class="ios-compatible"></span>
+        <span>Developer: Spark</span>
+    </div>
+</div>
+<div class="tweak-card" data-ios="">
+    <div class="tweak-header">
+        <div class="tweak-name">SnowBoard</div>
+    </div>
+    <div class="tweak-description">
+        Theme engine for iOS.
+    </div>
+    <div class="tweak-meta">
+        <span class="ios-compatible"></span>
+        <span>Developer: Spark, Spark & Dennis D. Bednarz</span>
+    </div>
+</div>
+<div class="tweak-card" data-ios="iOS 7,iOS 8,iOS 9,iOS 10,iOS 11,iOS 12,iOS 13,iOS 14,iOS 15,iOS 16">
+    <div class="tweak-header">
+        <div class="tweak-name">Filza File Manager</div>
+    </div>
+    <div class="tweak-description">
+        Advanced file manager for iOS.
+    </div>
+    <div class="tweak-meta">
+        <span class="ios-compatible">iOS 7.0 to iOS 16.5.1</span>
+        <span>Developer: BigBoss, TIGI Software</span>
+    </div>
+</div>
+<div class="tweak-card" data-ios="">
+    <div class="tweak-header">
+        <div class="tweak-name">WeatherGround</div>
+    </div>
+    <div class="tweak-description">
+        Animated weather wallpaper for your home and lock screen.
+    </div>
+    <div class="tweak-meta">
+        <span class="ios-compatible"></span>
+        <span>Developer: Tr1Fecta</span>
+    </div>
+</div>
+<div class="tweak-card" data-ios="">
+    <div class="tweak-header">
+        <div class="tweak-name">Felicity Pro</div>
+    </div>
+    <div class="tweak-description">
+        Beautiful icon theme for iOS.
+    </div>
+    <div class="tweak-meta">
+        <span class="ios-compatible"></span>
+        <span>Developer: XerusDesign</span>
+    </div>
+</div>
+<div class="tweak-card" data-ios="">
+    <div class="tweak-header">
+        <div class="tweak-name">Retranslate</div>
+    </div>
+    <div class="tweak-description">
+        Re-translate system text to your preferred language.
+    </div>
+    <div class="tweak-meta">
+        <span class="ios-compatible"></span>
+        <span>Developer: Preloading, SpaceSaver2000-1</span>
+    </div>
+</div>
+<div class="tweak-card" data-ios="">
+    <div class="tweak-header">
+        <div class="tweak-name">Sonus12</div>
+    </div>
+    <div class="tweak-description">
+        Modern volume HUD for iOS 12+.
+    </div>
+    <div class="tweak-meta">
+        <span class="ios-compatible"></span>
+        <span>Developer: ubik</span>
+    </div>
+</div>
+<div class="tweak-card" data-ios="iOS 2,iOS 3,iOS 4,iOS 5,iOS 6,iOS 7,iOS 8,iOS 9,iOS 10">
+    <div class="tweak-header">
+        <div class="tweak-name">iFile</div>
+    </div>
+    <div class="tweak-description">
+        Classic file manager for iOS.
+    </div>
+    <div class="tweak-meta">
+        <span class="ios-compatible">iOS 2.0 to iOS 10.3.4</span>
+        <span>Developer: Carsten Heinelt</span>
+    </div>
+</div>
+<div class="tweak-card" data-ios="">
+    <div class="tweak-header">
+        <div class="tweak-name">iFile/MTerminal icon fix</div>
+    </div>
+    <div class="tweak-description">
+        Fixes icons for iFile and MTerminal.
+    </div>
+    <div class="tweak-meta">
+        <span class="ios-compatible"></span>
+        <span>Developer: KawaiiZenbo, OldWorldOrder</span>
+    </div>
+</div>
+<div class="tweak-card" data-ios="iOS 7">
+    <div class="tweak-header">
+        <div class="tweak-name">Pangu 7.1-7.1.x Untether</div>
+    </div>
+    <div class="tweak-description">
+        Untethered jailbreak for iOS 7.1 - 7.1.2.
+    </div>
+    <div class="tweak-meta">
+        <span class="ios-compatible">iOS 7.1 to iOS 7.1.2</span>
+        <span>Developer: Pangu</span>
+    </div>
+</div>
+<div class="tweak-card" data-ios="iOS 4,iOS 5,iOS 6,iOS 7,iOS 8">
+    <div class="tweak-header">
+        <div class="tweak-name">ShowCase</div>
+    </div>
+    <div class="tweak-description">
+        Shows lowercase keys on the keyboard when Shift is off.
+    </div>
+    <div class="tweak-meta">
+        <span class="ios-compatible">iOS 4.0 to iOS 8.4.1</span>
+        <span>Developer: BigBoss, Lance Fetters (ashikase)</span>
+    </div>
+</div>
+<div class="tweak-card" data-ios="iOS 9,iOS 10,iOS 11,iOS 12,iOS 13,iOS 14,iOS 15,iOS 16">
+    <div class="tweak-header">
+        <div class="tweak-name">ReProvision Reborn</div>
+    </div>
+    <div class="tweak-description">
+        On-device app signing and provisioning.
+    </div>
+    <div class="tweak-meta">
+        <span class="ios-compatible">iOS 9.0+</span>
+        <span>Developer: Soh Satoh, Matt Clarke</span>
+    </div>
+</div>
+<div class="tweak-card" data-ios="">
+    <div class="tweak-header">
+        <div class="tweak-name">ShyLabels</div>
+    </div>
+    <div class="tweak-description">
+        Hides app labels on the home screen until you tap.
+    </div>
+    <div class="tweak-meta">
+        <span class="ios-compatible"></span>
+        <span>Developer: ConorTheDev, NoisyFlake</span>
+    </div>
+</div>
+<div class="tweak-card" data-ios="iOS 13,iOS 14,iOS 15,iOS 16">
+    <div class="tweak-header">
+        <div class="tweak-name">Atria</div>
+    </div>
+    <div class="tweak-description">
+        Advanced home screen layout engine.
+    </div>
+    <div class="tweak-meta">
+        <span class="ios-compatible">iOS 13.0+</span>
+        <span>Developer: ren7995</span>
+    </div>
+</div>
+<div class="tweak-card" data-ios="iOS 11,iOS 12,iOS 13,iOS 14,iOS 15,iOS 16">
+    <div class="tweak-header">
+        <div class="tweak-name">Axon</div>
+    </div>
+    <div class="tweak-description">
+        Powerful notification grouping tweak.
+    </div>
+    <div class="tweak-meta">
+        <span class="ios-compatible">iOS 11.0+</span>
+        <span>Developer: Baw Appie, Nepeta & Baw Appie</span>
+    </div>
+</div>
+<div class="tweak-card" data-ios="">
+    <div class="tweak-header">
+        <div class="tweak-name">AppSync for iOS 4.0</div>
+    </div>
+    <div class="tweak-description">
+        Enables the ability to install unsigned apps on iOS 4.
+    </div>
+    <div class="tweak-meta">
+        <span class="ios-compatible"></span>
+        <span>Developer: Karen/あけみ, Dissident</span>
+    </div>
+</div>
+<div class="tweak-card" data-ios="iOS 5,iOS 6,iOS 7,iOS 8,iOS 9,iOS 10,iOS 11,iOS 12,iOS 13,iOS 14,iOS 15,iOS 16">
+    <div class="tweak-header">
+        <div class="tweak-name">mikoto</div>
+    </div>
+    <div class="tweak-description">
+        System-wide enhancement tweak, with many features.
+    </div>
+    <div class="tweak-meta">
+        <span class="ios-compatible">iOS 5.0+</span>
+        <span>Developer: Karen/あけみ (angelXwind)</span>
+    </div>
+</div>
+<div class="tweak-card" data-ios="iOS 5,iOS 6,iOS 7,iOS 8">
+    <div class="tweak-header">
+        <div class="tweak-name">Software Update Killer</div>
+    </div>
+    <div class="tweak-description">
+        Disables iOS software update checks and nags.
+    </div>
+    <div class="tweak-meta">
+        <span class="ios-compatible">iOS 5.0 to iOS 8.4.1</span>
+        <span>Developer: BigBoss, Lunatik</span>
+    </div>
+</div>
+<div class="tweak-card" data-ios="">
+    <div class="tweak-header">
+        <div class="tweak-name">CallBar XS (iOS 12/13/14)</div>
+    </div>
+    <div class="tweak-description">
+        Modern call interface for iOS.
+    </div>
+    <div class="tweak-meta">
+        <span class="ios-compatible"></span>
+        <span>Developer: Elias Limneos</span>
+    </div>
+</div>
+<div class="tweak-card" data-ios="">
+    <div class="tweak-header">
+        <div class="tweak-name">OpenSSH</div>
+    </div>
+    <div class="tweak-description">
+        SSH server for iOS.
+    </div>
+    <div class="tweak-meta">
+        <span class="ios-compatible"></span>
+        <span>Developer: Jay Freeman (saurik)</span>
+    </div>
+</div>
+<div class="tweak-card" data-ios="">
+    <div class="tweak-header">
+        <div class="tweak-name">OpenSSL</div>
+    </div>
+    <div class="tweak-description">
+        SSL/TLS libraries for iOS.
+    </div>
+    <div class="tweak-meta">
+        <span class="ios-compatible"></span>
+        <span>Developer: Jay Freeman (saurik)</span>
+    </div>
+</div>
+<div class="tweak-card" data-ios="">
+    <div class="tweak-header">
+        <div class="tweak-name">iCleaner</div>
+    </div>
+    <div class="tweak-description">
+        Cleans up junk files and caches on iOS.
+    </div>
+    <div class="tweak-meta">
+        <span class="ios-compatible"></span>
+        <span>Developer: BigBoss, Ivano Bilenchi</span>
+    </div>
+</div>
+<div class="tweak-card" data-ios="iOS 12,iOS 13,iOS 14,iOS 15,iOS 16">
+    <div class="tweak-header">
+        <div class="tweak-name">Sileo</div>
+    </div>
+    <div class="tweak-description">
+        Modern APT package manager for iOS.
+    </div>
+    <div class="tweak-meta">
+        <span class="ios-compatible">iOS 12.2+</span>
+        <span>Developer: CoolStar, Sileo Team</span>
+    </div>
+</div>
+<div class="tweak-card" data-ios="">
+    <div class="tweak-header">
+        <div class="tweak-name">PreferenceLoader</div>
+    </div>
+    <div class="tweak-description">
+        Loads tweak preferences into the Settings app.
+    </div>
+    <div class="tweak-meta">
+        <span class="ios-compatible"></span>
+        <span>Developer: BigBoss, Sam Bingner</span>
+    </div>
+</div>
+<div class="tweak-card" data-ios="iOS 5,iOS 6,iOS 7,iOS 8,iOS 9,iOS 10,iOS 11,iOS 12,iOS 13,iOS 14,iOS 15,iOS 16">
+    <div class="tweak-header">
+        <div class="tweak-name">Discord Classic</div>
+    </div>
+    <div class="tweak-description">
+        Classic Discord UI for iOS.
+    </div>
+    <div class="tweak-meta">
+        <span class="ios-compatible">iOS 5.0+</span>
+        <span>Developer: InvoxiPlayGames, Trevir</span>
+    </div>
+</div>
+<div class="tweak-card" data-ios="iOS 2,iOS 3,iOS 4,iOS 5,iOS 6,iOS 7,iOS 8,iOS 9,iOS 10,iOS 11,iOS 12,iOS 13,iOS 14,iOS 15,iOS 16">
+    <div class="tweak-header">
+        <div class="tweak-name">Checkmate, Store!</div>
+    </div>
+    <div class="tweak-description">
+        Store for classic iOS apps and games.
+    </div>
+    <div class="tweak-meta">
+        <span class="ios-compatible">iOS 2.0+</span>
+        <span>Developer: InvoxiPlayGames</span>
+    </div>
+</div>
+<div class="tweak-card" data-ios="iOS 13,iOS 14,iOS 15,iOS 16">
+    <div class="tweak-header">
+        <div class="tweak-name">Multipla Lite</div>
+    </div>
+    <div class="tweak-description">
+        Adds widgets and more to the dock.
+    </div>
+    <div class="tweak-meta">
+        <span class="ios-compatible">iOS 13.0+</span>
+        <span>Developer: Thomz and ren7995</span>
+    </div>
+</div>
+<div class="tweak-card" data-ios="iOS 9,iOS 10,iOS 11,iOS 12,iOS 13,iOS 14,iOS 15,iOS 16">
+    <div class="tweak-header">
+        <div class="tweak-name">Zebra</div>
+    </div>
+    <div class="tweak-description">
+        Fast, modern package manager for jailbroken devices.
+    </div>
+    <div class="tweak-meta">
+        <span class="ios-compatible">iOS 9.0+</span>
+        <span>Developer: Zebra Team</span>
+    </div>
+</div>
+
+<!-- TWEAKS END -->
+    </div>
+    <script>
+        function toggleMenu() {
+            document.getElementById('menu').classList.toggle('active');
+            document.getElementById('overlay').classList.toggle('active');
+        }
+        function searchTweaks() {
+            const searchInput = document.getElementById('searchInput').value.toLowerCase();
+            const iosFilter = document.getElementById('iosVersionFilter').value;
+            const tweaks = document.querySelectorAll('.tweak-card');
+            tweaks.forEach(tweak => {
+                const tweakName = tweak.querySelector('.tweak-name').textContent.toLowerCase();
+                const tweakDescription = tweak.querySelector('.tweak-description').textContent.toLowerCase();
+                const tweakIOS = tweak.dataset.ios.split(',');
+                const matchesSearch = tweakName.includes(searchInput) || tweakDescription.includes(searchInput);
+                const matchesIOS = !iosFilter || tweakIOS.includes(iosFilter);
+                if (matchesSearch && matchesIOS) {
+                    tweak.style.display = 'block';
+                } else {
+                    tweak.style.display = 'none';
+                }
+            });
+        }
+        document.getElementById('iosVersionFilter').addEventListener('change', searchTweaks);
+        document.getElementById('searchInput').addEventListener('keyup', searchTweaks);
+    </script>
+</body>
+</html>
+
+

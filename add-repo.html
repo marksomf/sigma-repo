@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Repo - MarkSigma's Repo</title>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f2f2f7;
+            color: #333;
+        }
+        
+        /* Hamburger Menu */
+        .menu-container {
+            position: fixed;
+            top: 0;
+            left: 0;
+            height: 100%;
+            width: 250px;
+            background-color: #fff;
+            box-shadow: 2px 0 5px rgba(0,0,0,0.1);
+            transform: translateX(-250px);
+            transition: transform 0.3s ease;
+            z-index: 1000;
+        }
+        
+        .menu-container.active {
+            transform: translateX(0);
+        }
+        
+        .hamburger {
+            position: fixed;
+            top: 20px;
+            left: 20px;
+            width: 30px;
+            height: 30px;
+            cursor: pointer;
+            z-index: 1001;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+        }
+        
+        .hamburger span {
+            width: 100%;
+            height: 3px;
+            background-color: #007aff;
+            transition: all 0.3s ease;
+        }
+        
+        .menu-items {
+            padding: 60px 0 0 0;
+            list-style: none;
+        }
+        
+        .menu-items li {
+            padding: 15px 20px;
+            border-bottom: 1px solid #f2f2f2;
+        }
+        
+        .menu-items li a {
+            color: #333;
+            text-decoration: none;
+            font-size: 16px;
+            display: block;
+        }
+        
+        /* Header */
+        .header {
+            display: flex;
+            align-items: center;
+            padding: 60px 20px 20px;
+            background-color: #fff;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        
+        .header-profile-picture {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 2px solid #007aff;
+            margin-right: 15px;
+        }
+        
+        /* Add Repo Section */
+        .add-repo-container {
+            max-width: 800px;
+            margin: 30px auto;
+            padding: 20px;
+        }
+        
+        .repo-info {
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            padding: 20px;
+            margin-bottom: 30px;
+        }
+        
+        .repo-url {
+            background-color: #f2f2f7;
+            padding: 15px;
+            border-radius: 5px;
+            font-family: monospace;
+            margin: 15px 0;
+            word-break: break-all;
+        }
+        
+        .package-managers {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 20px;
+        }
+        
+        .package-manager {
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            padding: 20px;
+            transition: transform 0.2s;
+        }
+        
+        .package-manager:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+        }
+        
+        .package-manager-header {
+            display: flex;
+            align-items: center;
+            margin-bottom: 15px;
+        }
+        
+        .package-manager-icon {
+            width: 40px;
+            height: 40px;
+            margin-right: 15px;
+        }
+        
+        .package-manager-steps {
+            list-style-type: decimal;
+            padding-left: 20px;
+            line-height: 1.6;
+        }
+        
+        .add-button {
+            display: block;
+            width: 100%;
+            padding: 12px;
+            background-color: #007aff;
+            color: white;
+            text-align: center;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: bold;
+            margin-top: 15px;
+            transition: background-color 0.2s;
+        }
+        
+        .add-button:hover {
+            background-color: #0069d9;
+        }
+        
+        /* Overlay for menu */
+        .overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0,0,0,0.5);
+            display: none;
+            z-index: 999;
+        }
+        
+        .overlay.active {
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <!-- Hamburger Menu -->
+    <div class="hamburger" onclick="toggleMenu()">
+        <span></span>
+        <span></span>
+        <span></span>
+    </div>
+    
+    <div class="menu-container" id="menu">
+        <ul class="menu-items">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="add-repo.html">Add Repo</a></li>
+            <li><a href="tweaks-list.html">Tweaks</a></li>
+            <li><a href="about.html">About Me</a></li>
+            <li><a href="credits.html">Credits</a></li>
+        </ul>
+    </div>
+    
+    <div class="overlay" id="overlay" onclick="toggleMenu()"></div>
+    
+    <div class="header">
+        <img src="profile.jpg" alt="Profile Picture" class="header-profile-picture">
+        <h2>Add My Repo</h2>
+    </div>
+    
+    <div class="add-repo-container">
+        <div class="repo-info">
+            <h3>Repository URL</h3>
+            <div class="repo-url">https://repo.marksigma.co.uk/</div>
+            <p>Copy this URL to add to your favorite package manager, or use the quick-add buttons below.</p>
+        </div>
+        
+        <div class="package-managers">
+            <div class="package-manager">
+                <div class="package-manager-header">
+                    <img src="icons/cydia.png" alt="Cydia" class="package-manager-icon">
+                    <h3>Add to Cydia</h3>
+                </div>
+                <ol class="package-manager-steps">
+                    <li>Open Cydia</li>
+                    <li>Go to Sources tab</li>
+                    <li>Tap Edit, then Add</li>
+                    <li>Enter the repository URL</li>
+                    <li>Tap Add Source</li>
+                </ol>
+                <a href="cydia://url/https://cydia.saurik.com/api/share#?source=https://repo.marksigma.co.uk/" class="add-button">Quick Add to Cydia</a>
+            </div>
+            
+            <div class="package-manager">
+                <div class="package-manager-header">
+                    <img src="icons/sileo.png" alt="Sileo" class="package-manager-icon">
+                    <h3>Add to Sileo</h3>
+                </div>
+                <ol class="package-manager-steps">
+                    <li>Open Sileo</li>
+                    <li>Go to Sources tab</li>
+                    <li>Tap + button</li>
+                    <li>Enter the repository URL</li>
+                    <li>Tap Add Source</li>
+                </ol>
+                <a href="sileo://source/https://repo.marksigma.co.uk/" class="add-button">Quick Add to Sileo</a>
+            </div>
+            
+            <div class="package-manager">
+                <div class="package-manager-header">
+                    <img src="icons/zebra.png" alt="Zebra" class="package-manager-icon">
+                    <h3>Add to Zebra</h3>
+                </div>
+                <ol class="package-manager-steps">
+                    <li>Open Zebra</li>
+                    <li>Go to Sources tab</li>
+                    <li>Tap + button</li>
+                    <li>Enter the repository URL</li>
+                    <li>Tap Add Source</li>
+                </ol>
+                <a href="zbra://sources/add/https://repo.marksigma.co.uk/" class="add-button">Quick Add to Zebra</a>
+            </div>
+        </div>
+    </div>
+    
+    <script>
+        function toggleMenu() {
+            document.getElementById('menu').classList.toggle('active');
+            document.getElementById('overlay').classList.toggle('active');
+        }
+    </script>
+</body>
+</html>
