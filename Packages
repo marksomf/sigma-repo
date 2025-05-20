@@ -59,6 +59,25 @@ Icon: file:///Library/PreferenceBundles/ChromaHomeBarX.bundle/chroma@2x.png
 Name: ChromaHomeBarX
 Sponsor: thebigboss.org <http://thebigboss.org>
 
+Package: com.alphastream.linearforsb
+Version: 1.4.2-1
+Architecture: iphoneos-arm
+Maintainer: Alpha_Stream <alphastream113@gmail.com>
+Installed-Size: 486
+Depends: com.spark.snowboard, com.spark.snowboard.statusbar, firmware (>= 12.0)
+Filename: debs/com.alphastream.linearforsb_1.4.2-1_iphoneos-arm.deb
+Size: 214752
+MD5sum: 7b74cd786c42489e525676a083ba555c
+SHA1: 5142709e9c1d19fe17ee5fb19eff7d461462226c
+SHA256: fe5ee4a66e612d7f909acf19708ef3ef42e8a1c319b304ebd9924ca9b6febdb6
+Section: Themes
+Description: Status bar icons but in a form of lines.
+Tag: compatible_min::ios12.0
+Author: Alpha_Stream <alphastream113@gmail.com>
+Depiction: https://chariz.com/get/linear
+Icon: https://img.chariz.cloud/icon/linear/icon@3x.png
+Name: Linear for Status Bar
+
 Package: com.boo.airport
 Version: 2.1
 Architecture: iphoneos-arm
@@ -317,6 +336,27 @@ Depiction: https://chariz.com/get/cylinder-reborn
 Icon: https://img.chariz.cloud/icon/cylinder-reborn/icon@3x.png
 Name: Cylinder Reborn
 
+Package: com.shepgoba.batteryhomebar
+Version: 1.2
+Architecture: iphoneos-arm
+Maintainer: BigBoss <bigboss@thebigboss.org>
+Installed-Size: 271
+Depends: mobilesubstrate, me.nepeta.libcolorpicker | org.thebigboss.libcolorpicker (>= 1.6.3), firmware (>= 11.0), preferenceloader
+Filename: debs/batteryhomebar_1.2.deb
+Size: 13124
+MD5sum: 2a41791089fd7ebf252968df4065072a
+SHA1: 830e9045ab40dffe7f26a87dc8756dee0fa869a9
+SHA256: e5cdd97013b5fbfa13b1f299a5ecfac538bf93c0252ac296aaf5e075cc249078
+Section: Tweaks
+Homepage: http://moreinfo.thebigboss.org/moreinfo/depiction.php?file=batteryhomebarDp
+Description: Show the battery level on the Home Bar (iPhone X/XS/XR)
+Tag: purpose::extension, compatible::ios11, compatible::ios12
+Author: shepgoba <shepgoba@gmail.com>
+Depiction: http://moreinfo.thebigboss.org/moreinfo/depiction.php?file=batteryhomebarDp
+Dev: shepgoba
+Icon: file:///Library/PreferenceBundles/bhbsettings.bundle/icon@2x.png
+Name: BatteryHomeBar
+
 Package: com.shiftcmdk.pencilchargingindicator
 Version: 1.2~b7
 Architecture: iphoneos-arm
@@ -428,6 +468,23 @@ Description: Felicity, but Pro.
 Author: XerusDesign <unixdesignios@gmail.com>
 Name: Felicity Pro
 
+Package: es.ubikstyl.sonus12
+Version: 1.1.1-1
+Architecture: iphoneos-arm
+Maintainer: ubik <cydia@ubikstyl.es>
+Installed-Size: 612
+Depends: mobilesubstrate, preferenceloader, me.nepeta.libcolorpicker
+Conflicts: org.fwdr.sonus
+Filename: debs/es.ubikstyl.sonus12_1.1.1-1.deb
+Size: 65674
+MD5sum: 91cff7a7d58be61e6941048a732745d8
+SHA1: 5940a7ba7c0ab8be7e3d32176ad1b9b78f81487a
+SHA256: c295266ad7580e4fb1df3ce45e5409f8f4bf89d22db34582ca444441c3d93dbc
+Section: Tweaks
+Description: The better and highly customizable volume hud. For iOS 12.
+Author: ubik <cydia@ubikstyl.es>
+Name: Sonus12
+
 Package: jp.soh.reprovision
 Version: 0.8.4~release
 Architecture: iphoneos-arm
@@ -501,6 +558,26 @@ Section: Tweaks
 Description: Priority Hub for iOS 11 and 12
 Author: Nepeta & Baw Appie
 Name: Axon
+
+Package: net.limneos.callbarxs
+Version: 4.0-121
+Architecture: iphoneos-arm
+Maintainer: Elias Limneos <limneoselias@gmail.com>
+Installed-Size: 1708
+Depends: mobilesubstrate, preferenceloader, net.limneos.simpleactivationactions, firmware ( >= 12)
+Conflicts: com.hackyouriphone.limneosos, net.limneos.callbarx, com.pulandres.audiorecorderxs, com.pulandres.callbarxs, com.repo.xarold.com.audiorecorderxs, com.pulandres.bioprotectxs, net.pulandres.nfcwriterx, com.repo.xarold.com.nfcwriterx, com.pulandres.limneosos, com.repo.xarold.com.limneosos
+Filename: debs/net.limneos.callbarxs_4.0-121_iphoneos-arm.deb
+Size: 313688
+MD5sum: 8f7868f21c83bf6e1274cd39c4dceb0b
+SHA1: 84a0740190e49d362f710c57f302dbe04a6d896f
+SHA256: aaf476a715ba2bff781feabb66d72f9c9673638e5332639d37612c74372b9e74
+Section: Tweaks
+Description: Don't let incoming calls interrupt you!
+Author: Elias Limneos <limneoselias@gmail.com>
+Depiction: http://limneos.net/callbarxs
+Icon: file:///Library/PreferenceBundles/CallBarXPreferences.bundle/CallBarXPreferences@3x.png
+Mainlibmd5: 45565177c79761e015ed665ae6aac3e3
+Name: CallBar XS (iOS 12/13/14)
 
 Package: org.altervista.exilecom.icleaner
 Version: 7.10.0
