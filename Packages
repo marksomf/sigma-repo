@@ -342,6 +342,23 @@ Author: Muirey03
 Icon: file:///Library/PreferenceBundles/MinotaurPrefs.bundle/Icon-Large.png
 Name: Minotaur
 
+Package: com.nyathea.legacybird
+Version: 0.1-1+debug
+Architecture: iphoneos-arm
+Maintainer: nyathea
+Installed-Size: 296
+Depends: mobilesubstrate (>= 0.9.5000)
+Conflicts: com.nyathea.twtlegacypatcher
+Filename: debs/com.nyathea.legacybird_0.1-1+debug_iphoneos-arm.deb
+Size: 21312
+MD5sum: 82f7c4b95e117757bb84572250af9492
+SHA1: 09cbed9e78baf5fa29eb961ee39d603eb7156b09
+SHA256: 59a468c3f29d4984857dcb91f256935eb55c655d90104e511a2468d9406e4007
+Section: Tweaks
+Description: An awesome MobileSubstrate tweak!
+Author: nyathea
+Name: LegacyBird
+
 Package: com.opa334.choicy
 Version: 1.5.1
 Architecture: iphoneos-arm
