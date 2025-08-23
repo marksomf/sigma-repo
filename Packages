@@ -169,6 +169,23 @@ Depiction: http://repo.hackyouriphone.org/depiction/depiction.php?filename=local
 Name: LocalIAPStore
 Sileodepiction: https://depiction.hackyouriphone.org/sileoDepiction.php?filename=localiapstore
 
+Package: com.laughingquoll.noctisxi
+Version: 1.7.6
+Architecture: iphoneos-arm
+Maintainer: LaughingQuoll
+Installed-Size: 868
+Depends: mobilesubstrate, preferenceloader, me.nepeta.libcolorpicker, com.laughingquoll.prefixui, com.spark.libsparkapplist, com.opa334.ccsupport, com.rpetrich.rocketbootstrap
+Conflicts: com.laughingquoll.noctis12
+Filename: debs/com.laughingquoll.noctisxi_1.7.6.deb
+Size: 149486
+MD5sum: 2e35085e01288bebe4bae450ff4b8265
+SHA1: d9bc253fd9c078c83c2ae0e97024dc98ad309525
+SHA256: 003e8d03abca5a625a163eef0d6da1538d824d7be582e9deb897a82a64a0f45a
+Section: Tweaks
+Description: NoctisXI - System Wide Dark Mode for iOS 11
+Author: LaughingQuoll <me@laughingquoll.net>
+Name: NoctisXI
+
 Package: com.laughingquoll.siliquapro
 Version: 1.2.4
 Architecture: iphoneos-arm
