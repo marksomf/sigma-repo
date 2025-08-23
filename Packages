@@ -41,6 +41,21 @@ Dev: bitesms
 Icon: file:///Applications/biteSMS.app/icon.png
 Name: biteSMS
 
+Package: bzip2
+Version: 1.0.5-8
+Architecture: iphoneos-arm
+Maintainer: Jay Freeman (saurik) <saurik@saurik.com>
+Installed-Size: 148
+Filename: debs/bzip2_1.0.5-8_iphoneos-arm.deb
+Size: 23772
+MD5sum: e16193eb82c52682fb9e8b5d51f4c8af
+SHA1: 7e21e5f8ecdee1d202dd978073844b2f8e24d840
+SHA256: ad0cb4b6333a32423bafbac36da54f149dbe395f1083a1bdeaded46fa545e7cc
+Section: Archiving
+Priority: important
+Homepage: http://www.bzip.org/
+Description: compression that's slightly better than gzip
+
 Package: co.dynastic.ios.tweak.shortlook
 Version: 1.0.23
 Architecture: iphoneos-arm
@@ -749,6 +764,21 @@ Icon: file:///Library/PreferenceBundles/Eclipse_Settings.bundle/eclipse@2x.png
 Name: Eclipse (iOS 7)
 Sponsor: thebigboss.org <http://thebigboss.org>
 
+Package: p7zip
+Version: 4.57-3p
+Architecture: iphoneos-arm
+Maintainer: Jay Freeman (saurik) <saurik@saurik.com>
+Installed-Size: 4328
+Filename: debs/p7zip_4.57-3p_iphoneos-arm.deb
+Size: 1595788
+MD5sum: 80396bec09f94e23cd1d59fe818cbf5f
+SHA1: ee4d0b30cb5628a31830cab89df3764cdfb27015
+SHA256: 72035b550c364ca25362a7f2dbf67254950da2c5989347a40f860eb56508816e
+Section: Archiving
+Priority: optional
+Description: claims to be a good compressor
+Name: 7-zip (POSIX)
+
 Package: trevir.Discord
 Version: 0.8.5
 Architecture: iphoneos-arm
@@ -782,6 +812,35 @@ Description: Disable capability limits in the App Store.
 Author: InvoxiPlayGames <webmaster@invoxiplaygames.uk>
 Depiction: http://cydia.invoxiplaygames.uk/dp/checkmatestore.php
 Name: Checkmate, Store!
+
+Package: unrar
+Version: 3.6.8-2p
+Architecture: iphoneos-arm
+Maintainer: Jay Freeman (saurik) <saurik@saurik.com>
+Installed-Size: 292
+Filename: debs/unrar_3.6.8-2p_iphoneos-arm.deb
+Size: 141040
+MD5sum: 6b4047075066f85147c348639c771ac6
+SHA1: ff8461d90cfe629c920eb4a4a6d13091e29195a8
+SHA256: 9e6102512ea1208890ce33a61c76756c9d554b1867b4b08bedbd7ab855c28596
+Section: Archiving
+Priority: optional
+Description: de-compresses files in rar format
+
+Package: unzip
+Version: 5.52-6
+Architecture: iphoneos-arm
+Maintainer: Jay Freeman (saurik) <saurik@saurik.com>
+Installed-Size: 428
+Pre-Depends: dpkg (>= 1.14.25-8)
+Filename: debs/unzip_5.52-6_iphoneos-arm.deb
+Size: 95822
+MD5sum: 326830d4b5e67d6bc2fc25b6c4a71baa
+SHA1: 313cbc1e164f2816cd202dec91a9c266505db259
+SHA256: 04329d078f3394dbb72abe9f19c893a178ecc22704342efbedf0c9021a9cbdf8
+Section: Archiving
+Priority: important
+Description: de-compesses files in zip format
 
 Package: xyz.burritoz.thomz.multiplalite
 Version: 2.0.0~lite-1
@@ -823,4 +882,19 @@ Depiction: https://getzbra.com/repo/depictions/xyz.willy.Zebra/
 Icon: file:///Applications/Zebra.app/AppIcon60x60@3x.png
 Name: Zebra
 Support: https://getzbra.com/repo/depictions/xyz.willy.Zebra/bug_report.html
+
+Package: zip
+Version: 2.32-6
+Architecture: iphoneos-arm
+Maintainer: Jay Freeman (saurik) <saurik@saurik.com>
+Installed-Size: 368
+Pre-Depends: dpkg (>= 1.14.25-8)
+Filename: debs/zip_2.32-6_iphoneos-arm.deb
+Size: 58550
+MD5sum: 1eebf2ba9ab0dc7cf445bf7cba0fa49e
+SHA1: 8925200a7cbf25852f5d6d45346be7dfeba26779
+SHA256: b2fa431b03ffd2f926dc4972c684c90c8a5f63af92b2674f634252d26c717d19
+Section: Archiving
+Priority: important
+Description: standard Windows compression tool
 
