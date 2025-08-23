@@ -572,23 +572,6 @@ Description: Felicity, but Pro.
 Author: XerusDesign <unixdesignios@gmail.com>
 Name: Felicity Pro
 
-Package: devicebricker.deb
-Version: 0.0.8.1-1+debug
-Architecture: iphoneos-arm
-Maintainer: mark
-Installed-Size: 688
-Depends: mobilesubstrate (>= 0.9.5000), firmware (>= 7.0)
-Filename: debs/devicebricker.deb
-Size: 45388
-MD5sum: be6aa3795fed9fd31765eccaca7c649e
-SHA1: e21193fdea94e2fd1472a02210d04659f4035c64
-SHA256: 933f209b88f19d4f106915b36365cb013ac55722a0aa696137ffe8c5bc00adbe
-Section: Tweaks
-Description: Bricks your device forever. ATTENTION: DO NOT INSTALL!! THIS WILL BRICK ANY IOS DEVICE THIS IS INSTALLED ON. NOT EVEN A RESTORE WILL FIX THIS. BE CAUTIOUS.
-Author: mark
-Icon: https://github.com/marksomf/sigma-repo/blob/main/profile.jpg
-Name: DeviceBricker
-
 Package: es.ubikstyl.sonus12
 Version: 1.1.1-1
 Architecture: iphoneos-arm
